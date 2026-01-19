@@ -1217,25 +1217,45 @@ body {
   padding: 0 20px;
 }
 
+.guides-section .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #373737;
+}
+
 .guides-carousel {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  justify-content: center;
 }
 
 .carousel-nav {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #E0E0E0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding: 0;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.carousel-nav:hover {
+  background: #F4F4F4;
+  border-color: #C3C7CD;
+}
+
+.carousel-arrow-icon {
+  width: 10px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .guides-container {
@@ -1243,6 +1263,18 @@ body {
   gap: 20px;
   overflow-x: auto;
   flex: 1;
+  max-width: calc(100% - 120px);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.guides-container::-webkit-scrollbar {
+  display: none;
+}
+
+.guides-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .guide-card {
@@ -1250,32 +1282,37 @@ body {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: none;
   transition: all 0.2s ease;
 }
 
 .guide-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: none;
 }
 
 .guide-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 .guide-title {
   padding: 15px;
   font-size: 16px;
   font-weight: 600;
-  color: #000;
+  color: #373737;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .guide-meta {
   padding: 0 15px 15px;
   color: #666;
   font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* Costs Section */

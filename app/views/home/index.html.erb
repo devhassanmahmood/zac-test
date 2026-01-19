@@ -57,11 +57,11 @@
         <div class="pagination">
           <div class="pagination-controls">
             <button class="page-arrow">
-              <%= image_tag "arrow-left.svg", alt: "Previous", class: "arrow-icon" %>
+              <%= image_tag "pagination-arrow-left.svg", alt: "Previous", class: "arrow-icon" %>
             </button>
             <span class="page-info">1 of 5</span>
             <button class="page-arrow">
-              <%= image_tag "arrow-right.svg", alt: "Next", class: "arrow-icon" %>
+              <%= image_tag "pagination-arrow-right.svg", alt: "Next", class: "arrow-icon" %>
             </button>
           </div>
           <span class="results-info">Showing results 1-5 of 22</span>
@@ -91,25 +91,29 @@
 <section class="guides-section">
   <h2 class="section-title">Lawn mower repair guides</h2>
   <div class="guides-carousel">
-    <button class="carousel-nav prev">←</button>
+    <button class="carousel-nav prev">
+      <%= image_tag "pagination-arrow-left.svg", alt: "Previous", class: "carousel-arrow-icon" %>
+    </button>
     <div class="guides-container">
       <div class="guide-card">
-        <img src="https://via.placeholder.com/300x200" alt="Guide" class="guide-image">
+        <%= image_tag "law-more/1.png", alt: "Guide", class: "guide-image" %>
         <h3 class="guide-title">Denver Home Repair Pricing: What You Should Expect</h3>
-        <p class="guide-meta">By GreenPal • Updated on March 15, 2024</p>
+        <p class="guide-meta">by GreenPal • Updated on Nov 17, 2025</p>
       </div>
       <div class="guide-card">
-        <img src="https://via.placeholder.com/300x200" alt="Guide" class="guide-image">
-        <h3 class="guide-title">How to Maintain Your Lawn Mower</h3>
-        <p class="guide-meta">By GreenPal • Updated on March 10, 2024</p>
+        <%= image_tag "law-more/2.png", alt: "Guide", class: "guide-image" %>
+        <h3 class="guide-title">How much does outdoor furniture assembly cost?</h3>
+        <p class="guide-meta">by GreenPal • Updated on Nov 17, 2025</p>
       </div>
       <div class="guide-card">
-        <img src="https://via.placeholder.com/300x200" alt="Guide" class="guide-image">
-        <h3 class="guide-title">Common Lawn Mower Problems and Solutions</h3>
-        <p class="guide-meta">By GreenPal • Updated on March 5, 2024</p>
+        <%= image_tag "law-more/3.png", alt: "Guide", class: "guide-image" %>
+        <h3 class="guide-title">Common Repair Categories & Estimated Pricing</h3>
+        <p class="guide-meta">by GreenPal • Updated on Nov 17, 2025</p>
       </div>
     </div>
-    <button class="carousel-nav next">→</button>
+    <button class="carousel-nav next">
+      <%= image_tag "pagination-arrow-right.svg", alt: "Next", class: "carousel-arrow-icon" %>
+    </button>
   </div>
 </section>
 
