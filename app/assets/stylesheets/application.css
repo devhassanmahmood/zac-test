@@ -14,48 +14,101 @@ body {
 
 /* Header Styles */
 .main-header {
-  background-color: #04a78a;
+  background-color: #00A3E7;
   width: 100%;
-  padding: 14px 0;
+  max-width: 100%;
+  height: 80px;
+  padding: 0;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header-container {
-  max-width: 1400px;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo-section {
+  position: absolute;
+  top: 28px;
+  left: 60.91px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
-.logo-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+.logo-section:hover {
+  opacity: 0.9;
 }
 
-.logo-text {
-  color: #fff;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.5px;
+.logo-svg {
+  width: 160.7593231201172px;
+  height: 23.090728759765625px;
+  display: block;
+}
+
+.center-nav {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: 17px;
+}
+
+.center-nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 8px;
+  height: 17px;
+  white-space: nowrap;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.locations-link {
+  width: 74px;
+  left: 516px;
+}
+
+.explore-services-link {
+  left: calc(516px + 74px + 32px);
+}
+
+.dropdown-arrow {
+  width: 10px;
+  height: 6px;
+  flex-shrink: 0;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-left: auto;
+  padding-right: 60.91px;
 }
 
 .nav-link {
@@ -76,43 +129,66 @@ body {
 
 .btn-join-pro {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.6);
-  color: #fff;
-  padding: 9px 18px;
-  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #FFFFFF;
+  width: 98px;
+  height: 44px;
+  border-radius: 33px;
   cursor: pointer;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.2s ease;
 }
 
 .btn-quotes {
-  background-color: #028a73;
-  color: #fff;
-  border: none;
-  padding: 9px 18px;
-  border-radius: 5px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #FFFFFF;
+  height: 44px;
+  border-radius: 33px;
   cursor: pointer;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.2s ease;
 }
 
 .btn-login {
-  background-color: #f98323;
-  color: #fff;
+  background: linear-gradient(0deg, #FF6F00 0%, #FF9B00 92.39%);
+  color: #FFFFFF;
   border: none;
-  padding: 9px 22px;
-  border-radius: 5px;
+  width: 107px;
+  height: 44px;
+  border-radius: 33px;
   cursor: pointer;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
   font-size: 14px;
-  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.2s ease;
 }
 
 /* Hero Section */
 .hero-section {
-  margin-top: 62px;
+  margin-top: 80px;
   height: 400px;
   background-image: url('https://via.placeholder.com/1920x400');
   background-size: cover;
@@ -1300,11 +1376,22 @@ body {
 @media (max-width: 768px) {
   /* Header Mobile */
   .main-header {
-    padding: 12px 0;
+    height: 80px;
+    padding: 0;
   }
   
   .header-container {
     padding: 0 16px;
+  }
+  
+  .logo-section {
+    top: 28px;
+    left: 16px;
+  }
+  
+  .logo-svg {
+    width: 120px;
+    height: auto;
   }
   
   .logo-icon {
@@ -1344,7 +1431,7 @@ body {
   
   /* Hero Section Mobile */
   .hero-section {
-    margin-top: 56px;
+    margin-top: 80px;
     height: 300px;
   }
   
