@@ -972,66 +972,154 @@ body {
 }
 
 /* Costs Section */
-.costs-section {
+/* Combined Repair Costs and About Section */
+.repair-costs-about-section {
   max-width: 1400px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+
+.repair-costs-about-wrapper {
+  width: 65%;
+  /* Match listings-column width: 65% of content-wrapper */
+}
+
+.repair-costs-about-container {
+  background-color: #F7F7F7;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.costs-section-inner {
+  margin-bottom: 20px;
+}
+
+.costs-section-inner .section-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #373737;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.about-section-inner {
+  padding-top: 12px;
+}
+
+.about-section-inner .section-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #373737;
+  font-size: 20px;
+  line-height: 1.35;
+  text-align: left;
 }
 
 .section-subtitle {
-  color: #666;
-  font-size: 17px;
+  color: #666666;
+  font-size: 12px;
   margin-bottom: 32px;
   line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
 }
 
 .costs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
+  margin-bottom: 0;
 }
 
 .cost-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
   border-radius: 10px;
-  padding: 24px;
-  text-align: center;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: column;
   transition: all 0.2s ease;
+  box-shadow: none;
 }
 
 .cost-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: translateY(-2px);
 }
 
-.cost-service {
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
+.cost-card-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 12px;
 }
 
-.cost-price {
-  font-size: 22px;
-  font-weight: 700;
-  color: #04a78a;
-  margin: 0;
-  letter-spacing: -0.3px;
+.cost-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* About Section */
-.about-section {
-  max-width: 1400px;
-  margin: 60px auto;
-  padding: 0 20px;
+.cost-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cost-icon svg circle[fill="#E8F5E9"] {
+  fill: #E8F5E9;
+}
+
+.cost-icon svg path[stroke="#4CAF50"],
+.cost-icon svg circle[stroke="#4CAF50"],
+.cost-icon svg rect[stroke="#4CAF50"] {
+  stroke: #4CAF50;
+}
+
+.cost-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.cost-service {
+  font-size: 12px;
+  font-weight: 400;
+  color: #373737;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.cost-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #373737;
+  margin: 0;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.cost-description {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
 }
 
 .about-text {
-  color: #666;
-  font-size: 17px;
+  color: #848484;
+  font-size: 16px;
   line-height: 1.75;
-  max-width: 920px;
+  margin: 0;
+  font-weight: 400;
+  text-align: left;
 }
 
 /* FAQ Section */
@@ -1574,15 +1662,18 @@ body {
 
 .chat-widget {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background: #fff;
-  border-radius: 50px;
-  padding: 12px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-top: 1px solid #e0e0e0;
+  padding: 16px 24px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
   cursor: pointer;
   z-index: 1000;
 }
@@ -1607,6 +1698,8 @@ body {
   color: #333;
   font-size: 14px;
   font-weight: 500;
+  text-align: center;
+  flex: 1;
 }
 
 /* Responsive Design */
@@ -1990,10 +2083,27 @@ body {
     font-size: 11px;
   }
   
-  /* Costs Section Mobile */
-  .costs-section {
+  /* Repair Costs and About Section Mobile */
+  .repair-costs-about-section {
     margin: 40px auto;
     padding: 0 16px;
+  }
+  
+  .repair-costs-about-wrapper {
+    width: 100%;
+  }
+  
+  .repair-costs-about-container {
+    padding: 24px 20px;
+  }
+  
+  .costs-section-inner {
+    margin-bottom: 32px;
+  }
+  
+  .costs-section-inner .section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
   
   .section-subtitle {
@@ -2002,32 +2112,91 @@ body {
   }
   
   .costs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
   
   .cost-card {
     padding: 20px;
+    border: 1px solid #E0E0E0;
+  }
+  
+  .cost-card-main {
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .cost-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+  
+  .cost-card-content {
+    text-align: left;
   }
   
   .cost-service {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: #373737;
   }
   
   .cost-price {
-    font-size: 20px;
+    font-size: 18px;
+    margin: 0;
+    color: #373737;
   }
   
-  /* About Section Mobile */
-  .about-section {
-    margin: 40px auto;
-    padding: 0 16px;
+  .cost-description {
+    font-size: 13px;
+    color: #666666;
+    text-align: center;
+  }
+  
+  .about-section-inner {
+    padding-top: 12px;
+  }
+  
+  .about-section-inner .section-title {
+    font-size: 24px;
+    margin-bottom: 12px;
   }
   
   .about-text {
     font-size: 15px;
     line-height: 1.7;
+  }
+  
+  @media (max-width: 640px) {
+    .costs-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    
+    .repair-costs-about-container {
+      padding: 20px 16px;
+    }
+    
+    .costs-section-inner {
+      margin-bottom: 24px;
+    }
+    
+    .about-section-inner {
+      padding-top: 12px;
+    }
+  }
+  
+  .about-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  @media (max-width: 640px) {
+    .costs-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
   }
   
   /* FAQ Section Mobile */
@@ -2336,15 +2505,20 @@ body {
   
   /* Chat Widget Mobile */
   .chat-widget {
-    bottom: 16px;
-    right: 16px;
-    padding: 10px 16px;
-    border-radius: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 0;
+    justify-content: flex-start;
+    max-width: 100%;
   }
   
   .chat-avatar {
     width: 36px;
     height: 36px;
+    flex-shrink: 0;
   }
   
   .chat-icon {
@@ -2353,6 +2527,7 @@ body {
   }
   
   .chat-text {
-    font-size: 12px;
+    font-size: 13px;
+    flex: 1;
   }
 }
