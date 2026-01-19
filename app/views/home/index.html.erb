@@ -55,10 +55,16 @@
 
         <!-- Pagination -->
         <div class="pagination">
-          <button class="page-arrow">←</button>
-          <span class="page-info">1 of 5</span>
-          <button class="page-arrow">→</button>
-          <span class="results-info">Showing results 1-20 of 37</span>
+          <div class="pagination-controls">
+            <button class="page-arrow">
+              <%= image_tag "arrow-left.svg", alt: "Previous", class: "arrow-icon" %>
+            </button>
+            <span class="page-info">1 of 5</span>
+            <button class="page-arrow">
+              <%= image_tag "arrow-right.svg", alt: "Next", class: "arrow-icon" %>
+            </button>
+          </div>
+          <span class="results-info">Showing results 1-5 of 22</span>
         </div>
       </div>
     </div>

@@ -1156,30 +1156,58 @@ body {
 /* Pagination */
 .pagination {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  gap: 8px;
   margin-top: 30px;
   padding: 20px 0;
+  width: 100%;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .page-arrow {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 8px 12px;
-  border-radius: 4px;
+  background: #F4F4F4;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.2s;
+}
+
+.page-arrow:hover {
+  background: #E0E0E0;
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .page-info {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
+  color: #373737;
+  line-height: 1;
 }
 
 .results-info {
-  color: #666;
+  color: #999;
   font-size: 14px;
-  margin-left: auto;
+  margin-top: 0;
+  text-align: center;
 }
 
 /* Guides Section */
