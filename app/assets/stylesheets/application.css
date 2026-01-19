@@ -950,61 +950,84 @@ body {
 }
 
 /* FAQ Section */
-.faq-section {
+.faq-wrapper {
   max-width: 1400px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+
+.faq-section {
+  width: 65%;
+  padding: 30px 20px;
+  background-color: #E5F6FD;
+  border-radius: 12px;
 }
 
 .faq-header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 .faq-decorative-line {
-  flex: 1;
   height: 2px;
-  background: #e0f7f4;
+  background: transparent;
+  display: none;
 }
 
 .faq-icon {
-  width: 40px;
-  height: 40px;
-  background: #e0f7f4;
-  border-radius: 50%;
+  display: none;
+}
+
+.faq-section .section-title {
+  color: #373737;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  color: #04a78a;
+  gap: 12px;
+}
+
+.faq-title-arrow {
+  width: 16px;
+  height: 39px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .faq-subtitle {
-  color: #666;
+  color: #373737;
   font-size: 17px;
+  margin-top: 0;
   margin-bottom: 32px;
   line-height: 1.5;
+  opacity: 0.8;
+  text-align: center;
 }
 
 .faq-accordion {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 
 .faq-item {
   background: #fff;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(55, 55, 55, 0.2);
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.2s ease;
+  margin-bottom: 0;
 }
 
 .faq-item:hover {
-  border-color: #04a78a;
-  box-shadow: 0 2px 8px rgba(4, 167, 138, 0.1);
+  border-color: rgba(55, 55, 55, 0.3);
+  box-shadow: none;
 }
 
 .faq-question {
@@ -1015,41 +1038,82 @@ body {
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
+  color: #373737;
+  background: #fff;
 }
 
 .faq-arrow {
   font-size: 14px;
-  color: #666;
+  color: #959898;
+  transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-arrow {
+  transform: rotate(180deg);
 }
 
 .faq-answer {
   padding: 0 20px 20px;
-  color: #666;
+  color: #373737;
   font-size: 14px;
   line-height: 1.6;
   display: none;
+  opacity: 0.8;
 }
 
 .faq-item.open .faq-answer {
   display: block;
 }
 
+.faq-item-blurred-light {
+  filter: blur(2px);
+  opacity: 0.8;
+  pointer-events: none;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-item-blurred-light.show {
+  filter: blur(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.faq-item-blurred {
+  filter: blur(4px);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-item-blurred.show {
+  filter: blur(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .btn-show-more {
-  margin-top: 24px;
+  margin-top: -40px;
   background: transparent;
-  border: 2px solid #04a78a;
-  color: #04a78a;
+  border: 1px solid #000;
+  color: #000;
   padding: 12px 32px;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
 }
 
 .btn-show-more:hover {
-  background-color: #04a78a;
-  color: #fff;
+  background-color: rgba(229, 246, 253, 0.3);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* Mowing Section */
@@ -1821,14 +1885,28 @@ body {
   }
   
   /* FAQ Section Mobile */
-  .faq-section {
+  .faq-wrapper {
     margin: 40px auto;
     padding: 0 16px;
+  }
+  
+  .faq-section {
+    width: 100%;
+    padding: 20px 16px;
   }
   
   .faq-header {
     gap: 10px;
     margin-bottom: 8px;
+  }
+  
+  .faq-section .section-title {
+    gap: 8px;
+  }
+  
+  .faq-title-arrow {
+    width: 12px;
+    height: 30px;
   }
   
   .faq-icon {
@@ -1857,9 +1935,13 @@ body {
   }
   
   .btn-show-more {
-    margin-top: 20px;
+    margin-top: -35px;
     padding: 10px 28px;
     font-size: 13px;
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 700;
   }
   
   /* Mowing Section Mobile */
