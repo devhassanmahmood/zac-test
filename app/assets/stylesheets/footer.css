@@ -391,7 +391,7 @@
 }
 
 .footer-countries-container {
-  width: 1084px;
+  width: 90%;
   height: 300px;
   position: absolute;
   top: 580px;
@@ -451,18 +451,21 @@
 }
 
 .footer-blur-container {
-  width: 1140px;
+  width: 100%;
   height: 139px;
   position: absolute;
-  top: 179px;
-  left: -47px;
+  top: 759px;
+  left: 0;
   opacity: 1;
-  background: rgba(10, 55, 85, 0.698);
+  background: rgba(10, 55, 85, 0.7);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,1) 100%);
 }
 
 .show-more-cities-blur {
