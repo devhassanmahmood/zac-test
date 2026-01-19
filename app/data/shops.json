@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "Mile High Mower Repair",
+    "logo": "card-images/company/1.png",
+    "mainImage": "card-images/1.png",
+    "thumbnails": [
+      "card-images/1.png",
+      "card-images/1.png",
+      "card-images/1.png",
+      "card-images/1.png",
+      "card-images/1.png"
+    ],
+    "rating": 4.5,
+    "reviewCount": 4940,
+    "location": "Cherry Creek",
+    "distance": "2.8 miles",
+    "status": "Closed",
+    "statusText": "Closed until 8:00 AM",
+    "serviceTypes": ["Husqvarna", "Cub Cadet", "Pickup"],
+    "pricing": [
+      {
+        "service": "Engine repair",
+        "price": "$80 - $120"
+      },
+      {
+        "service": "Carburetor clean",
+        "price": "$45 - $75"
+      }
+    ],
+    "turnaround": "Same day",
+    "servicesOffered": ["Engine Repair", "Carburetor Cleaning", "Belt Replacement", "+2"],
+    "description": "Mile High Equipment Pros is a trusted local shop specializing in lawn mower repair, small engine service...",
+    "socialMedia": ["instagram", "facebook", "tiktok", "twitter", "linkedin"]
+  },
+  {
+    "id": 2,
+    "name": "Lawn Equipment Pros",
+    "logo": "card-images/company/2.png",
+    "mainImage": "card-images/2.png",
+    "thumbnails": [
+      "card-images/2.png",
+      "card-images/2-1.png",
+      "card-images/2-2.png",
+      "card-images/2.png",
+      "card-images/2.png"
+    ],
+    "rating": 4.5,
+    "reviewCount": 4940,
+    "location": "Highland",
+    "distance": "2.3 miles",
+    "status": "Open",
+    "statusText": "Open until 6:00 PM today",
+    "serviceTypes": ["Honda", "Mobile", "Toro", "Pickup"],
+    "pricing": [
+      {
+        "service": "Tune-up",
+        "price": "$80 - $120"
+      },
+      {
+        "service": "Blade Sharpen",
+        "price": "$12 - $18"
+      }
+    ],
+    "turnaround": "Same day",
+    "servicesOffered": ["Blade Sharpening", "Tune-up", "Engine Repair", "Oil Changes"],
+    "description": "Lawn Equipment Pros is a trusted shop specializing in mower repair, small engine service...",
+    "socialMedia": ["instagram", "facebook", "tiktok", "twitter", "linkedin"]
+  },
+  {
+    "id": 3,
+    "name": "Quick Fix Lawn Service",
+    "logo": "card-images/company/3.png",
+    "mainImage": "card-images/3.png",
+    "thumbnails": [
+      "card-images/3.png",
+      "card-images/3.png",
+      "card-images/3.png",
+      "card-images/3.png",
+      "card-images/3.png"
+    ],
+    "rating": 4.5,
+    "reviewCount": 4940,
+    "location": "Highland",
+    "distance": "2.8 miles",
+    "status": "Open",
+    "statusText": "Open until 6:00 PM today",
+    "serviceTypes": ["Craftsman", "Troy-Bilt", "Pickup"],
+    "pricing": [
+      {
+        "service": "Diagnostics",
+        "price": "$35 - $50"
+      },
+      {
+        "service": "Transmission",
+        "price": "$200 - $450"
+      }
+    ],
+    "turnaround": "Same week",
+    "servicesOffered": ["Deck Welding", "Transmission Repair", "Engine Diagnostics"],
+    "description": "Quick Fix Lawn Service is a friendly neighborhood repair shop committed to fast, reliable lawn and garden equipment...",
+    "socialMedia": ["instagram", "facebook", "tiktok", "twitter", "linkedin"]
+  },
+  {
+    "id": 4,
+    "name": "Rocky Mountain Equipment",
+    "logo": "card-images/company/1.png",
+    "mainImage": "card-images/4.png",
+    "thumbnails": [
+      "card-images/4.png",
+      "card-images/4.png",
+      "card-images/4.png",
+      "card-images/4.png",
+      "card-images/4.png"
+    ],
+    "rating": 4.5,
+    "reviewCount": 4940,
+    "location": "Wash Park",
+    "distance": "2.8 miles",
+    "status": "Open",
+    "statusText": "Open until 6:00 PM today",
+    "serviceTypes": ["Craftsman", "Troy-Bilt", "Pickup"],
+    "pricing": [
+      {
+        "service": "Blade Sharpen",
+        "price": "$12 - $18"
+      },
+      {
+        "service": "Tune-up",
+        "price": "$80 - $120"
+      }
+    ],
+    "turnaround": "Same week",
+    "servicesOffered": ["Blade Sharpening", "Tune-up", "Engine Repair", "Oil Changes"],
+    "description": "Rocky Mountain Equipment Service is a friendly neighborhood repair shop committed to fast, reliable lawn and...",
+    "socialMedia": ["instagram", "facebook", "tiktok", "twitter", "linkedin"]
+  },
+  {
+    "id": 5,
+    "name": "Budget Lawn Repairs",
+    "logo": "card-images/company/2.png",
+    "mainImage": "card-images/4.png",
+    "thumbnails": [
+      "card-images/4.png",
+      "card-images/4.png",
+      "card-images/4.png",
+      "card-images/4.png",
+      "card-images/4.png"
+    ],
+    "rating": 4.5,
+    "reviewCount": 4940,
+    "location": "Wash Park",
+    "distance": "2.8 miles",
+    "status": "Open",
+    "statusText": "Open until 6:00 PM today",
+    "serviceTypes": ["Craftsman", "Troy-Bilt", "Pickup"],
+    "pricing": [
+      {
+        "service": "Tune-up",
+        "price": "$80 - $120"
+      },
+      {
+        "service": "Blade Sharpen",
+        "price": "$12 - $18"
+      }
+    ],
+    "turnaround": "Same week",
+    "servicesOffered": ["Blade Sharpening", "Tune-up", "Engine Repair", "Oil Changes"],
+    "description": "Budget Lawn Repairs Service is a friendly neighborhood repair shop committed to fast, reliable lawn and...",
+    "socialMedia": ["instagram", "facebook", "tiktok", "twitter", "linkedin"]
+  }
+]
+

@@ -390,18 +390,39 @@
   gap: 20px;
 }
 
-.footer-cities {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
+.footer-countries-container {
+  width: 1084px;
+  height: 300px;
+  position: absolute;
+  top: 580px;
+  left: 160px;
+  opacity: 1;
 }
 
-.footer-cities a {
+.footer-cities {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-cities-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-cities-column a {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  letter-spacing: 0px;
   color: rgba(255,255,255,0.8);
   text-decoration: none;
-  font-size: 14px;
   transition: color 0.2s ease;
+  display: block;
 }
 
 .footer-cities a:hover {
@@ -413,14 +434,58 @@
   border: 1px solid rgba(255,255,255,0.3);
   color: #fff;
   padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: 10px;
+  align-self: center;
+  width: fit-content;
 }
 
 .show-more-cities:hover {
   border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.1);
+}
+
+.footer-blur-container {
+  width: 1140px;
+  height: 139px;
+  position: absolute;
+  top: 179px;
+  left: -47px;
+  opacity: 1;
+  background: rgba(10, 55, 85, 0.698);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.show-more-cities-blur {
+  width: 192px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #fff;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-more-cities-blur:hover {
+  border-color: rgba(255,255,255,0.6);
   background: rgba(255,255,255,0.1);
 }
 
