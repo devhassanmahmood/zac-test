@@ -21,5 +21,57 @@
       <button type="button" class="btn-quotes">Get Free Lawn Mowing Quotes</button>
       <button type="button" class="btn-login">Log In</button>
     </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button type="button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="mobileMenuToggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <%= link_to "#", class: "mobile-nav-link" do %>
+        <span>Locations</span>
+        <%= image_tag "dropdown-arrow.svg", alt: "", class: "dropdown-arrow", aria: { hidden: true } %>
+      <% end %>
+      <%= link_to "#", class: "mobile-nav-link" do %>
+        <span>Explore Services</span>
+        <%= image_tag "dropdown-arrow.svg", alt: "", class: "dropdown-arrow", aria: { hidden: true } %>
+      <% end %>
+      <button type="button" class="mobile-btn mobile-btn-join">Join as Pro</button>
+      <button type="button" class="mobile-btn mobile-btn-quotes">Get Free Lawn Mowing Quotes</button>
+      <button type="button" class="mobile-btn mobile-btn-login">Log In</button>
+    </nav>
   </div>
 </header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const header = document.querySelector('.main-header');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', function() {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('active');
+        header.classList.toggle('menu-open');
+        menuToggle.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!header.contains(event.target) && mobileMenu.classList.contains('active')) {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.remove('active');
+          header.classList.remove('menu-open');
+          menuToggle.classList.remove('active');
+        }
+      });
+    }
+  });
+</script>

@@ -27,12 +27,14 @@
 
 .logo-section {
   position: absolute;
-  top: 28px;
+  top: 50%;
   left: 60.91px;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  z-index: 10;
 }
 
 .logo-section:hover {
@@ -95,6 +97,8 @@
   gap: 16px;
   margin-left: auto;
   padding-right: 60.91px;
+  position: relative;
+  z-index: 5;
 }
 
 .nav-link {
@@ -172,20 +176,173 @@
   transition: all 0.2s ease;
 }
 
-/* Header Mobile Styles */
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #00A3E7;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+  max-height: 500px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 16px;
+}
+
+.mobile-nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link .dropdown-arrow {
+  transform: rotate(180deg);
+  width: 10px;
+  height: 6px;
+}
+
+.mobile-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 33px;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  border: none;
+}
+
+.mobile-btn-join {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #FFFFFF;
+}
+
+.mobile-btn-quotes {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #FFFFFF;
+}
+
+.mobile-btn-login {
+  background: linear-gradient(0deg, #FF6F00 0%, #FF9B00 92.39%);
+  color: #FFFFFF;
+}
+
+.mobile-btn:hover {
+  opacity: 0.9;
+}
+
+/* Header Responsive Styles */
+
+/* Large Tablets and below (1024px) */
+@media (max-width: 1024px) {
+  .logo-section {
+    left: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .center-nav {
+    display: none;
+  }
+  
+  .header-nav {
+    padding-right: 24px;
+    gap: 12px;
+  }
+  
+  .btn-quotes {
+    display: none;
+  }
+}
+
+/* Tablets (768px) */
 @media (max-width: 768px) {
   .main-header {
-    height: 80px;
-    padding: 0;
+    height: 70px;
   }
   
   .header-container {
     padding: 0 16px;
+    position: relative;
   }
   
   .logo-section {
-    top: 28px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 16px;
+    position: absolute;
+    z-index: 10;
   }
   
   .logo-svg {
@@ -193,29 +350,154 @@
     height: auto;
   }
   
+  .center-nav {
+    display: none;
+  }
+  
   .header-nav {
-    flex-wrap: wrap;
+    padding-right: 50px;
     gap: 8px;
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 5;
   }
   
-  .nav-link {
+  .btn-join-pro {
+    width: auto;
+    padding: 0 12px;
     font-size: 12px;
-    gap: 2px;
-  }
-  
-  .dropdown-icon {
-    width: 12px;
-    height: 12px;
-  }
-  
-  .btn-join-pro,
-  .btn-quotes,
-  .btn-login {
-    padding: 7px 12px;
-    font-size: 12px;
+    height: 36px;
+    flex-shrink: 0;
   }
   
   .btn-quotes {
     display: none;
+  }
+  
+  .btn-login {
+    width: auto;
+    padding: 0 16px;
+    font-size: 12px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    right: 16px;
+    z-index: 1001;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+  .main-header {
+    height: 60px;
+  }
+  
+  .header-container {
+    padding: 0 12px;
+    position: relative;
+  }
+  
+  .logo-section {
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 10;
+    max-width: calc(100% - 120px);
+  }
+  
+  .logo-svg {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .header-nav {
+    padding-right: 50px;
+    gap: 6px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .btn-join-pro {
+    padding: 0 10px;
+    font-size: 11px;
+    height: 32px;
+    min-width: 70px;
+    flex-shrink: 0;
+  }
+  
+  .btn-login {
+    padding: 0 12px;
+    font-size: 11px;
+    height: 32px;
+    min-width: 70px;
+    flex-shrink: 0;
+  }
+  
+  .mobile-menu-toggle {
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    z-index: 1001;
+  }
+  
+  .mobile-nav {
+    padding: 16px 12px;
+    gap: 12px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  
+  .mobile-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Mobile (360px) */
+@media (max-width: 360px) {
+  .logo-section {
+    max-width: calc(100% - 100px);
+  }
+  
+  .logo-svg {
+    width: 90px;
+    max-width: 100%;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+  
+  .btn-join-pro,
+  .btn-login {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    right: 12px;
+    width: 26px;
+    height: 26px;
+    z-index: 1001;
+  }
+  
+  .mobile-nav-link {
+    font-size: 14px;
+  }
+  
+  .mobile-btn {
+    font-size: 12px;
+    padding: 10px 14px;
   }
 }
