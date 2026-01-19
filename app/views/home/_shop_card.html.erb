@@ -86,32 +86,32 @@
     <p class="shop-description">
       <%= shop['description'] %> <a href="#" class="read-more">Read More</a>
     </p>
-    <div class="social-media-icons">
+    <div class="shop-card-social-icons">
       <% shop['socialMedia'].each do |social| %>
         <% case social
              when 'instagram' %>
-          <a href="#" class="social-icon">
-            <%= image_tag "shop-card-instagram-icon.svg", alt: "Instagram", class: "social-icon-img" %>
+          <a href="#" class="shop-card-social-icon">
+            <%= image_tag "shop-card-instagram-icon.svg", alt: "Instagram", class: "shop-card-social-icon-img" %>
           </a>
         <% when 'facebook' %>
-          <a href="#" class="social-icon">
-            <%= image_tag "shop-card-facebook-icon.svg", alt: "Facebook", class: "social-icon-img" %>
+          <a href="#" class="shop-card-social-icon">
+            <%= image_tag "shop-card-facebook-icon.svg", alt: "Facebook", class: "shop-card-social-icon-img" %>
           </a>
         <% when 'twitter', 'x' %>
-          <a href="#" class="social-icon">
-            <%= image_tag "shop-card-x-icon.svg", alt: "X", class: "social-icon-img" %>
+          <a href="#" class="shop-card-social-icon">
+            <%= image_tag "shop-card-x-icon.svg", alt: "X", class: "shop-card-social-icon-img" %>
           </a>
         <% when 'tiktok' %>
-          <a href="#" class="social-icon">
-            <%= image_tag "shop-card-tiktok-icon.svg", alt: "TikTok", class: "social-icon-img" %>
+          <a href="#" class="shop-card-social-icon">
+            <%= image_tag "shop-card-tiktok-icon.svg", alt: "TikTok", class: "shop-card-social-icon-img" %>
           </a>
         <% when 'linkedin' %>
-          <a href="#" class="social-icon">
-            <%= image_tag "shop-card-linkedin-icon.svg", alt: "LinkedIn", class: "social-icon-img" %>
+          <a href="#" class="shop-card-social-icon">
+            <%= image_tag "shop-card-linkedin-icon.svg", alt: "LinkedIn", class: "shop-card-social-icon-img" %>
           </a>
         <% else %>
-          <a href="#" class="social-icon">
-            <span class="social-icon-text"><%= social %></span>
+          <a href="#" class="shop-card-social-icon">
+            <span class="shop-card-social-icon-text"><%= social %></span>
           </a>
         <% end %>
       <% end %>

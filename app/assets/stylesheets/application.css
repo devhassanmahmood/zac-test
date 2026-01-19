@@ -227,7 +227,7 @@ body {
 .content-header-section {
   background: #FFFFFF;
   width: 100%;
-  max-width: calc(100% - 500px);
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 24px;
@@ -245,7 +245,7 @@ body {
 }
 
 .main-content > .search-filter-bar {
-  max-width: calc(100% - 500px);
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 24px;
@@ -260,8 +260,12 @@ body {
   align-items: flex-start;
   flex-direction: row; /* Listings in center, map on right */
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   position: relative;
   justify-content: center;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .listings-column {
@@ -273,8 +277,7 @@ body {
   padding-right: 32px;
   padding-top: 0;
   border-radius: 0;
-  width: 100%;
-  max-width: calc(100% - 720px);
+  width: 65%;
   margin: 0 auto;
   margin-right: 0;
 }
@@ -959,22 +962,22 @@ body {
   opacity: 1;
 }
 
-.social-media-icons {
+.shop-card-social-icons {
   position: absolute;
   width: 200px;
-  height: 32px;
+  height: 28px;
   left: 0px;
   top: 296px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 10px;
+  gap: 8px;
 }
 
-.social-icon {
-  width: 32px;
-  height: 32px;
+.shop-card-social-icon {
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -986,14 +989,14 @@ body {
   flex-shrink: 0;
 }
 
-.social-icon-img {
-  width: 14px;
-  height: 14px;
+.shop-card-social-icon-img {
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 
-.social-icon-text {
-  font-size: 14px;
+.shop-card-social-icon-text {
+  font-size: 12px;
   line-height: 1;
   color: #373737;
   font-weight: 500;
@@ -1214,14 +1217,19 @@ body {
 .guides-section {
   max-width: 1400px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-.guides-section .section-title {
+.guides-wrapper .section-title {
   text-align: center;
   margin-bottom: 30px;
   font-weight: 600;
   color: #373737;
+}
+
+.guides-wrapper {
+  width: 65%;
+  /* Match listings-column and repair-costs-about-wrapper width */
 }
 
 .guides-carousel {
@@ -1381,7 +1389,7 @@ body {
   background: #FFFFFF;
   border: 1px solid #E0E0E0;
   border-radius: 10px;
-  padding: 8px 16px 8px 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   transition: all 0.2s ease;
@@ -1398,6 +1406,7 @@ body {
   align-items: center;
   gap: 16px;
   margin-bottom: 12px;
+  min-height: 64px;
 }
 
 .cost-icon {
@@ -1407,21 +1416,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #E8F5E9;
+  border-radius: 50%;
 }
 
-.cost-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.cost-icon svg circle[fill="#E8F5E9"] {
-  fill: #E8F5E9;
-}
-
-.cost-icon svg path[stroke="#4CAF50"],
-.cost-icon svg circle[stroke="#4CAF50"],
-.cost-icon svg rect[stroke="#4CAF50"] {
-  stroke: #4CAF50;
+.cost-icon-img {
+  width: auto;
+  height: auto;
+  max-width: 38px;
+  max-height: 36px;
+  object-fit: contain;
 }
 
 .cost-card-content {
@@ -1454,7 +1458,7 @@ body {
   margin: 0;
   line-height: 1.5;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
 
 .about-text {
@@ -1637,14 +1641,39 @@ body {
 .mowing-section {
   max-width: 1400px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  background-color: #F7F7F7;
+}
+
+.mowing-wrapper {
+  width: 65%;
+  /* Match listings-column, repair-costs-about-wrapper, and guides-wrapper width */
+}
+
+.mowing-section .section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #373737;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.35;
+}
+
+.mowing-subtitle {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
 }
 
 .mowing-carousel {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  justify-content: center;
 }
 
 .mowing-container {
@@ -1652,90 +1681,187 @@ body {
   gap: 20px;
   overflow-x: auto;
   flex: 1;
+  max-width: calc(100% - 80px);
+}
+
+.mowing-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mowing-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .mowing-card {
-  flex: 0 0 300px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  flex: 0 0 344px;
+  width: 344px;
+  height: 194px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   position: relative;
-  border: 1px solid #f0f0f0;
+  border: none;
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .mowing-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
-.mowing-price-badge {
+.mowing-price-tag {
   position: absolute;
-  top: 18px;
-  left: 18px;
-  font-size: 26px;
+  width: 52px;
+  height: 65.35px;
+  left: 277px;
+  top: -16px;
+  z-index: 1;
+}
+
+.price-tag-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0px 1.67742px 3.35484px rgba(0, 0, 0, 0.282027));
+}
+
+.price-tag-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.price-tag-amount {
+  font-family: 'Heebo', sans-serif;
+  font-style: normal;
   font-weight: 700;
-  color: #000;
-  letter-spacing: -0.5px;
+  font-size: 18.4516px;
+  line-height: 19px;
+  color: #FFFFFF;
+  width: 32px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
 }
 
-.mowing-price-label {
-  position: absolute;
-  top: 46px;
-  left: 18px;
-  font-size: 12px;
-  color: #666;
-}
-
-.mowing-available {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #04a78a;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 11px;
+.price-tag-label {
+  font-family: 'Heebo', sans-serif;
+  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.2px;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 40px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mowing-top-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mowing-avatar-wrapper {
+  flex-shrink: 0;
 }
 
 .mowing-avatar {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 50px auto 10px;
   display: block;
+}
+
+.mowing-available {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #8FB741;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.available-checkmark {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .mowing-name {
   font-size: 18px;
-  font-weight: 600;
-  color: #000;
-  margin: 10px 0;
+  font-weight: 700;
+  color: #373737;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
 }
 
-.mowing-rating {
-  color: #666;
-  font-size: 13px;
-  margin: 6px 0;
+.mowing-rating-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.mowing-stars {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.mowing-star {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(95%) saturate(2000%) hue-rotate(0deg) brightness(1.1);
+}
+
+.mowing-rating-text {
+  color: #666666;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .mowing-price {
-  color: #666;
+  color: #8FB741;
   font-size: 14px;
-  margin: 10px 0;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
 }
 
 .btn-see-price {
-  background-color: #04a78a;
-  color: #fff;
-  border: none;
+  background-color: #FFFFFF;
+  color: #373737;
+  border: 1px solid #373737;
+  border-radius: 8px;
   padding: 10px 20px;
-  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  align-self: center;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -2082,11 +2208,24 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+  .content-header-section {
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .main-content > .search-filter-bar {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
   .content-wrapper {
     flex-direction: column;
+    max-width: 100%;
+    padding: 0 20px;
   }
   
   .listings-column {
+    width: 100%;
     flex: 1;
   }
   
@@ -2098,6 +2237,14 @@ body {
   
   .costs-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .guides-wrapper {
+    width: 100%;
+  }
+  
+  .mowing-wrapper {
+    width: 100%;
   }
 }
 
@@ -2191,13 +2338,27 @@ body {
     padding-bottom: 90px; /* Add padding to prevent content from being hidden behind fixed banner */
   }
   
+  .content-header-section {
+    padding: 16px;
+    max-width: 100%;
+  }
+  
+  .main-content > .search-filter-bar {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+  
   .content-wrapper {
     flex-direction: column;
     gap: 20px;
+    max-width: 100%;
+    padding: 0 16px;
   }
   
   .listings-column {
     flex: 1;
+    width: 100%;
+    padding: 0 16px;
   }
   
   .map-column {
@@ -2429,6 +2590,10 @@ body {
     padding: 0 16px;
   }
   
+  .guides-wrapper {
+    width: 100%;
+  }
+  
   .guides-carousel {
     gap: 10px;
   }
@@ -2638,12 +2803,17 @@ body {
     padding: 0 16px;
   }
   
+  .mowing-wrapper {
+    width: 100%;
+  }
+  
   .mowing-carousel {
     gap: 10px;
   }
   
   .mowing-container {
     gap: 12px;
+    max-width: calc(100% - 60px);
   }
   
   .mowing-card {
@@ -2651,23 +2821,9 @@ body {
     padding: 20px;
   }
   
-  .mowing-price-badge {
-    top: 14px;
-    left: 14px;
-    font-size: 22px;
-  }
-  
-  .mowing-price-label {
-    top: 38px;
-    left: 14px;
-    font-size: 11px;
-  }
-  
   .mowing-available {
     top: 12px;
-    right: 12px;
-    padding: 4px 8px;
-    font-size: 10px;
+    left: 12px;
   }
   
   .mowing-avatar {

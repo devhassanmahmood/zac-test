@@ -89,8 +89,9 @@
 
 <!-- Lawn Mower Repair Guides -->
 <section class="guides-section">
-  <h2 class="section-title">Lawn mower repair guides</h2>
-  <div class="guides-carousel">
+  <div class="guides-wrapper">
+    <h2 class="section-title">Lawn mower repair guides</h2>
+    <div class="guides-carousel">
     <button class="carousel-nav prev">
       <%= image_tag "pagination-arrow-left.svg", alt: "Previous", class: "carousel-arrow-icon" %>
     </button>
@@ -114,6 +115,7 @@
     <button class="carousel-nav next">
       <%= image_tag "pagination-arrow-right.svg", alt: "Next", class: "carousel-arrow-icon" %>
     </button>
+  </div>
   </div>
 </section>
 
@@ -238,49 +240,106 @@
 
 <!-- Lawn Mowing Service Section -->
 <section class="mowing-section">
-  <h2 class="section-title">Need a lawn mowing service while your lawnmower is being repaired?</h2>
-  <p class="section-subtitle">Best lawn mowing services near by you.</p>
-  <div class="mowing-carousel">
-    <button class="carousel-nav prev">←</button>
-    <div class="mowing-container">
-      <div class="mowing-card">
-        <div class="mowing-price-badge">$75</div>
-        <div class="mowing-price-label">/mowing</div>
-        <div class="mowing-available">Available</div>
-        <img src="https://via.placeholder.com/100x100" alt="Provider" class="mowing-avatar">
-        <h3 class="mowing-name">Green Lawn Care</h3>
-        <div class="rating-section">
-          <span class="mowing-rating">(4.8/5 . 105 Reviews)</span>
+  <div class="mowing-wrapper">
+    <h2 class="section-title">Need a lawn mowing service while your lawnmower is being repaired?</h2>
+    <p class="mowing-subtitle">Best lawn mowing services near by you.</p>
+    <div class="mowing-carousel">
+      <button class="carousel-nav prev">
+        <%= image_tag "pagination-arrow-left.svg", alt: "Previous", class: "carousel-arrow-icon" %>
+      </button>
+      <div class="mowing-container">
+        <div class="mowing-card">
+          <div class="mowing-price-tag">
+            <%= image_tag "price-tag-icon.svg", alt: "Price", class: "price-tag-svg" %>
+            <div class="price-tag-content">
+              <span class="price-tag-amount">$75</span>
+              <span class="price-tag-label">/mowing</span>
+            </div>
+          </div>
+          <div class="mowing-top-section">
+            <div class="mowing-avatar-wrapper">
+              <%= image_tag "people/1.png", alt: "Provider", class: "mowing-avatar" %>
+            </div>
+            <div class="mowing-available">
+              <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
+              <span>Available</span>
+            </div>
+          </div>
+          <h3 class="mowing-name">Green Lawn Care</h3>
+          <div class="mowing-rating-section">
+            <div class="mowing-stars">
+              <% 5.times do %>
+                <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
+              <% end %>
+            </div>
+            <span class="mowing-rating-text">(4.8/5. 105 Reviews)</span>
+          </div>
+          <p class="mowing-price">$ Ava. Price: $75 per cut</p>
+          <button class="btn-see-price">See My Free Price</button>
         </div>
-        <p class="mowing-price">Avg. Price: $75 per cut</p>
-        <button class="btn-see-price">See My Free Price</button>
-      </div>
-      <div class="mowing-card">
-        <div class="mowing-price-badge">$74</div>
-        <div class="mowing-price-label">/mowing</div>
-        <div class="mowing-available">Available</div>
-        <img src="https://via.placeholder.com/100x100" alt="Provider" class="mowing-avatar">
-        <h3 class="mowing-name">Perfect Yard Services</h3>
-        <div class="rating-section">
-          <span class="mowing-rating">(4.8/5 . 98 Reviews)</span>
+        <div class="mowing-card">
+          <div class="mowing-price-tag">
+            <%= image_tag "price-tag-icon.svg", alt: "Price", class: "price-tag-svg" %>
+            <div class="price-tag-content">
+              <span class="price-tag-amount">$74</span>
+              <span class="price-tag-label">/mowing</span>
+            </div>
+          </div>
+          <div class="mowing-top-section">
+            <div class="mowing-avatar-wrapper">
+              <%= image_tag "people/2.png", alt: "Provider", class: "mowing-avatar" %>
+            </div>
+            <div class="mowing-available">
+              <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
+              <span>Available</span>
+            </div>
+          </div>
+          <h3 class="mowing-name">Perfect Yard Services</h3>
+          <div class="mowing-rating-section">
+            <div class="mowing-stars">
+              <% 5.times do %>
+                <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
+              <% end %>
+            </div>
+            <span class="mowing-rating-text">(4.8/5. 98 Reviews)</span>
+          </div>
+          <p class="mowing-price">$ Ava. Price: $74 per cut</p>
+          <button class="btn-see-price">See My Free Price</button>
         </div>
-        <p class="mowing-price">Avg. Price: $74 per cut</p>
-        <button class="btn-see-price">See My Free Price</button>
-      </div>
-      <div class="mowing-card">
-        <div class="mowing-price-badge">$28</div>
-        <div class="mowing-price-label">/mowing</div>
-        <div class="mowing-available">Available</div>
-        <img src="https://via.placeholder.com/100x100" alt="Provider" class="mowing-avatar">
-        <h3 class="mowing-name">Denver Lawn Pros</h3>
-        <div class="rating-section">
-          <span class="mowing-rating">(4.8/5 . 98 Reviews)</span>
+        <div class="mowing-card">
+          <div class="mowing-price-tag">
+            <%= image_tag "price-tag-icon.svg", alt: "Price", class: "price-tag-svg" %>
+            <div class="price-tag-content">
+              <span class="price-tag-amount">$76</span>
+              <span class="price-tag-label">/mowing</span>
+            </div>
+          </div>
+          <div class="mowing-top-section">
+            <div class="mowing-avatar-wrapper">
+              <%= image_tag "people/3.png", alt: "Provider", class: "mowing-avatar" %>
+            </div>
+            <div class="mowing-available">
+              <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
+              <span>Available</span>
+            </div>
+          </div>
+          <h3 class="mowing-name">Denver Lawn Pros</h3>
+          <div class="mowing-rating-section">
+            <div class="mowing-stars">
+              <% 5.times do %>
+                <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
+              <% end %>
+            </div>
+            <span class="mowing-rating-text">(4.8/5. 98 Reviews)</span>
+          </div>
+          <p class="mowing-price">$ Ava. Price: $76 per cut</p>
+          <button class="btn-see-price">See My Free Price</button>
         </div>
-        <p class="mowing-price">Avg. Price: $28 per cut</p>
-        <button class="btn-see-price">See My Free Price</button>
       </div>
+      <button class="carousel-nav next">
+        <%= image_tag "pagination-arrow-right.svg", alt: "Next", class: "carousel-arrow-icon" %>
+      </button>
     </div>
-    <button class="carousel-nav next">→</button>
   </div>
 </section>
 
