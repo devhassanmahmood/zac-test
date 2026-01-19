@@ -1,0 +1,724 @@
+<!-- Header -->
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo-section">
+      <%= image_tag "Logo.svg", alt: "GreenPal Logo", class: "logo-icon" %>
+      <span class="logo-text">GREENPAL</span>
+    </div>
+    <nav class="header-nav">
+      <button class="btn-join-pro">Join as Pro</button>
+      <a href="#" class="nav-link">Explore Services <%= image_tag "Down_Arrow_3_.png", alt: "Dropdown", class: "dropdown-icon" %></a>
+      <a href="#" class="nav-link">Locations <%= image_tag "Down_Arrow_3_.png", alt: "Dropdown", class: "dropdown-icon" %></a>
+      <button class="btn-quotes">Get Free Lawn Mowing Quotes</button>
+      <button class="btn-login">Log In</button>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-search-box">
+    <h1 class="hero-title">Find the best lawn mower repair shops in Denver, Colorado</h1>
+    <span class="location-badge">22 near you</span>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="content-wrapper">
+    <!-- Left Column - Listings -->
+    <div class="listings-column">
+      <h2 class="section-title">The best lawn mower repair shops in Denver, Colorado</h2>
+      
+      <!-- Search/Filter Bar -->
+      <div class="search-filter-bar">
+        <div class="search-input-wrapper">
+          <%= image_tag "fi_14090371.png", alt: "Search", class: "search-icon" %>
+          <input type="text" placeholder="Search by Key shops" class="search-input">
+        </div>
+        <select class="filter-dropdown">
+          <option>Recommended</option>
+        </select>
+      </div>
+
+      <!-- Shop Listings -->
+      <div class="shop-listings">
+        <!-- Shop Card 1 -->
+        <div class="shop-card">
+            <div class="shop-image-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Shop" class="shop-image">
+            <div class="play-overlay">
+              <%= image_tag "Group 65.svg", alt: "Play", class: "play-icon" %>
+            </div>
+          </div>
+          <div class="shop-details">
+            <div class="verified-badge">Verified by GreenPal</div>
+            <h3 class="shop-name">Lawn Equipment Pros</h3>
+            <div class="rating-section">
+              <span class="rating-value">4.5</span>
+              <div class="star-icons">
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon star-icon-half" %>
+              </div>
+              <span class="review-count">(4,940 reviews)</span>
+            </div>
+            <div class="shop-location">Highland</div>
+            <div class="shop-meta">
+              <span class="status-open">Open until 6:00 PM today</span>
+              <span class="distance">2.3 miles</span>
+            </div>
+            <div class="service-types">
+              <span class="service-type-tag">Honda</span>
+              <span class="service-type-tag">Mobile</span>
+              <span class="service-type-tag">Toro</span>
+              <span class="service-type-tag">Pickup</span>
+            </div>
+            <div class="service-pricing">
+              <div class="pricing-item">
+                <span class="service-name">Tune-up:</span>
+                <span class="price-range">$80 - $120</span>
+              </div>
+              <div class="pricing-item">
+                <span class="service-name">Blade Sharpen:</span>
+                <span class="price-range">$12 - $18</span>
+              </div>
+              <div class="turnaround">Typical Turnaround: Same day</div>
+            </div>
+            <div class="service-offers-section">
+              <div class="service-offers-label">Service Offered</div>
+              <div class="service-offers">
+                <span class="offer-tag">Blade Sharpening</span>
+                <span class="offer-tag">Tune-up</span>
+                <span class="offer-tag">Engine Repair</span>
+                <span class="offer-tag">Oil Changes</span>
+              </div>
+            </div>
+            <p class="shop-description">
+              Lawn Equipment Pros is a trusted shop specializing in mower repair, small engine service... <a href="#" class="read-more">Read More</a>
+            </p>
+            <div class="shop-actions">
+              <button class="action-btn call-btn">
+                <%= image_tag "fi_32195.png", alt: "Call", class: "action-icon" %>
+                Call
+              </button>
+              <button class="action-btn directions-btn">
+                <%= image_tag "Map.png", alt: "Directions", class: "action-icon" %>
+                Directions
+              </button>
+              <button class="action-btn view-profile-btn">View Profile</button>
+            </div>
+            <div class="image-carousel">
+              <img src="https://via.placeholder.com/60x60" alt="Gallery" class="carousel-thumb">
+              <img src="https://via.placeholder.com/60x60" alt="Gallery" class="carousel-thumb">
+              <img src="https://via.placeholder.com/60x60" alt="Gallery" class="carousel-thumb">
+            </div>
+          </div>
+        </div>
+
+        <!-- Get Free Quotes Banner -->
+        <div class="quotes-banner">
+          <p>Get free quotes for lawn mowing?</p>
+          <button class="btn-get-quotes">Get Free Quotes</button>
+        </div>
+
+        <!-- Shop Card 2 -->
+        <div class="shop-card">
+          <div class="shop-image-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Shop" class="shop-image">
+          </div>
+          <div class="shop-details">
+            <div class="verified-badge">Verified by GreenPal</div>
+            <h3 class="shop-name">Mile High Mower Repair</h3>
+            <div class="rating-section">
+              <span class="rating-value">4.5</span>
+              <div class="star-icons">
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon star-icon-half" %>
+              </div>
+              <span class="review-count">(4,940 reviews)</span>
+              <span class="status-open-inline">Open</span>
+            </div>
+            <div class="shop-location">Cherry Creek</div>
+            <div class="shop-meta">
+              <span class="status-closed">Closed until 8:00 AM</span>
+              <span class="distance">2.8 miles</span>
+            </div>
+            <div class="service-types">
+              <span class="service-type-tag">Pickup</span>
+              <span class="service-type-tag">Cub Cadet</span>
+              <span class="service-type-tag">Husqvarna</span>
+            </div>
+            <div class="service-pricing">
+              <div class="pricing-item">
+                <span class="service-name">Engine repair:</span>
+                <span class="price-range">$80 - $120</span>
+              </div>
+              <div class="pricing-item">
+                <span class="service-name">Carburetor clean:</span>
+                <span class="price-range">$45 - $75</span>
+              </div>
+              <div class="turnaround">Typical Turnaround: Same day</div>
+            </div>
+            <div class="service-offers-section">
+              <div class="service-offers-label">Service Offered</div>
+              <div class="service-offers">
+                <span class="offer-tag">Carburetor Cleaning</span>
+                <span class="offer-tag">Engine Repair</span>
+                <span class="offer-tag">+2</span>
+                <span class="offer-tag">Belt Replacement</span>
+              </div>
+            </div>
+            <p class="shop-description">
+              Mile High Equipment Pros is a trusted local shop specializing in lawn mower repair, small engine service... <a href="#" class="read-more">Read More</a>
+            </p>
+            <div class="shop-actions">
+              <button class="action-btn call-btn">
+                <%= image_tag "fi_32195.png", alt: "Call", class: "action-icon" %>
+                Call
+              </button>
+              <button class="action-btn directions-btn">
+                <%= image_tag "Map.png", alt: "Directions", class: "action-icon" %>
+                Directions
+              </button>
+              <button class="action-btn view-profile-btn">View Profile</button>
+            </div>
+            <div class="image-carousel">
+              <img src="https://via.placeholder.com/60x60" alt="Gallery" class="carousel-thumb">
+              <img src="https://via.placeholder.com/60x60" alt="Gallery" class="carousel-thumb">
+            </div>
+          </div>
+        </div>
+
+        <!-- Shop Card 3 -->
+        <div class="shop-card">
+          <div class="shop-image-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Shop" class="shop-image">
+          </div>
+          <div class="shop-details">
+            <div class="verified-badge">Verified by GreenPal</div>
+            <h3 class="shop-name">Quick Fix Lawn Service</h3>
+            <div class="rating-section">
+              <span class="rating-value">4.5</span>
+              <div class="star-icons">
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon star-icon-half" %>
+              </div>
+              <span class="review-count">(4,940 reviews)</span>
+            </div>
+            <div class="shop-location">Highland</div>
+            <div class="shop-meta">
+              <span class="status-open">Open until 6:00 PM today</span>
+              <span class="distance">2.8 miles</span>
+            </div>
+            <div class="service-types">
+              <span class="service-type-tag">Craftsman</span>
+              <span class="service-type-tag">Troy-Bilt</span>
+              <span class="service-type-tag">Pickup</span>
+            </div>
+            <div class="service-pricing">
+              <div class="pricing-item">
+                <span class="service-name">Diagnostics:</span>
+                <span class="price-range">$35 - $50</span>
+              </div>
+              <div class="pricing-item">
+                <span class="service-name">Transmission:</span>
+                <span class="price-range">$200 - $450</span>
+              </div>
+              <div class="turnaround">Typical Turnaround: Same week</div>
+            </div>
+            <div class="service-offers-section">
+              <div class="service-offers-label">Service Offered</div>
+              <div class="service-offers">
+                <span class="offer-tag">Deck Welding</span>
+                <span class="offer-tag">Transmission Repair</span>
+                <span class="offer-tag">Engine Diagnostics</span>
+              </div>
+            </div>
+            <p class="shop-description">
+              Quick Fix Lawn Service is a friendly neighborhood repair shop committed to fast, reliable lawn and garden equipment... <a href="#" class="read-more">Read More</a>
+            </p>
+            <div class="shop-actions">
+              <button class="action-btn call-btn">
+                <%= image_tag "fi_32195.png", alt: "Call", class: "action-icon" %>
+                Call
+              </button>
+              <button class="action-btn directions-btn">
+                <%= image_tag "Map.png", alt: "Directions", class: "action-icon" %>
+                Directions
+              </button>
+              <button class="action-btn view-profile-btn">View Profile</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shop Card 4 -->
+        <div class="shop-card">
+          <div class="shop-image-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Shop" class="shop-image">
+          </div>
+          <div class="shop-details">
+            <div class="verified-badge">Verified by GreenPal</div>
+            <h3 class="shop-name">Rocky Mountain Equipment</h3>
+            <div class="rating-section">
+              <span class="rating-value">4.5</span>
+              <div class="star-icons">
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon star-icon-half" %>
+              </div>
+              <span class="review-count">(4,940 reviews)</span>
+            </div>
+            <div class="shop-location">Wash Park</div>
+            <div class="shop-meta">
+              <span class="status-open">Open until 6:00 PM today</span>
+              <span class="distance">2.8 miles</span>
+            </div>
+            <div class="service-types">
+              <span class="service-type-tag">Craftsman</span>
+              <span class="service-type-tag">Troy-Bilt</span>
+              <span class="service-type-tag">Pickup</span>
+            </div>
+            <div class="service-pricing">
+              <div class="pricing-item">
+                <span class="service-name">Blade Sharpen:</span>
+                <span class="price-range">$12 - $18</span>
+              </div>
+              <div class="pricing-item">
+                <span class="service-name">Tune-up:</span>
+                <span class="price-range">$80 - $120</span>
+              </div>
+              <div class="turnaround">Typical Turnaround: Same week</div>
+            </div>
+            <div class="service-offers-section">
+              <div class="service-offers-label">Service Offered</div>
+              <div class="service-offers">
+                <span class="offer-tag">Blade Sharpening</span>
+                <span class="offer-tag">Tune-up</span>
+                <span class="offer-tag">Engine Repair</span>
+                <span class="offer-tag">Oil Changes</span>
+              </div>
+            </div>
+            <p class="shop-description">
+              Rocky Mountain Equipment Service is a friendly neighborhood repair shop committed to fast, reliable lawn and... <a href="#" class="read-more">Read More</a>
+            </p>
+            <div class="shop-actions">
+              <button class="action-btn call-btn">
+                <%= image_tag "fi_32195.png", alt: "Call", class: "action-icon" %>
+                Call
+              </button>
+              <button class="action-btn directions-btn">
+                <%= image_tag "Map.png", alt: "Directions", class: "action-icon" %>
+                Directions
+              </button>
+              <button class="action-btn view-profile-btn">View Profile</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shop Card 5 -->
+        <div class="shop-card">
+          <div class="shop-image-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Shop" class="shop-image">
+          </div>
+          <div class="shop-details">
+            <div class="verified-badge">Verified by GreenPal</div>
+            <h3 class="shop-name">Budget Lawn Repairs</h3>
+            <div class="rating-section">
+              <span class="rating-value">4.5</span>
+              <div class="star-icons">
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon" %>
+                <%= image_tag "star (1).svg", alt: "Star", class: "star-icon star-icon-half" %>
+              </div>
+              <span class="review-count">(4,940 reviews)</span>
+            </div>
+            <div class="shop-location">Wash Park</div>
+            <div class="shop-meta">
+              <span class="status-open">Open until 6:00 PM today</span>
+              <span class="distance">2.8 miles</span>
+            </div>
+            <div class="service-types">
+              <span class="service-type-tag">Craftsman</span>
+              <span class="service-type-tag">Troy-Bilt</span>
+              <span class="service-type-tag">Pickup</span>
+            </div>
+            <div class="service-pricing">
+              <div class="pricing-item">
+                <span class="service-name">Tune-up:</span>
+                <span class="price-range">$80 - $120</span>
+              </div>
+              <div class="pricing-item">
+                <span class="service-name">Blade Sharpen:</span>
+                <span class="price-range">$12 - $18</span>
+              </div>
+              <div class="turnaround">Typical Turnaround: Same week</div>
+            </div>
+            <div class="service-offers-section">
+              <div class="service-offers-label">Service Offered</div>
+              <div class="service-offers">
+                <span class="offer-tag">Blade Sharpening</span>
+                <span class="offer-tag">Tune-up</span>
+                <span class="offer-tag">Engine Repair</span>
+                <span class="offer-tag">Oil Changes</span>
+              </div>
+            </div>
+            <p class="shop-description">
+              Budget Lawn Repairs Service is a friendly neighborhood repair shop committed to fast, reliable lawn and... <a href="#" class="read-more">Read More</a>
+            </p>
+            <div class="shop-actions">
+              <button class="action-btn call-btn">
+                <%= image_tag "fi_32195.png", alt: "Call", class: "action-icon" %>
+                Call
+              </button>
+              <button class="action-btn directions-btn">
+                <%= image_tag "Map.png", alt: "Directions", class: "action-icon" %>
+                Directions
+              </button>
+              <button class="action-btn view-profile-btn">View Profile</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="page-arrow">←</button>
+          <span class="page-info">1 of 5</span>
+          <button class="page-arrow">→</button>
+          <span class="results-info">Showing results 1-20 of 37</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - Map -->
+    <div class="map-column">
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.12941030147!2d-105.1099275!3d39.7392358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0xa1205b8429195c9!2sDenver%2C%20CO!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="google-map">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Lawn Mower Repair Guides -->
+<section class="guides-section">
+  <h2 class="section-title">Lawn mower repair guides</h2>
+  <div class="guides-carousel">
+    <button class="carousel-nav prev">←</button>
+    <div class="guides-container">
+      <div class="guide-card">
+        <img src="https://via.placeholder.com/300x200" alt="Guide" class="guide-image">
+        <h3 class="guide-title">Denver Home Repair Pricing: What You Should Expect</h3>
+        <p class="guide-meta">By GreenPal • Updated on March 15, 2024</p>
+      </div>
+      <div class="guide-card">
+        <img src="https://via.placeholder.com/300x200" alt="Guide" class="guide-image">
+        <h3 class="guide-title">How to Maintain Your Lawn Mower</h3>
+        <p class="guide-meta">By GreenPal • Updated on March 10, 2024</p>
+      </div>
+      <div class="guide-card">
+        <img src="https://via.placeholder.com/300x200" alt="Guide" class="guide-image">
+        <h3 class="guide-title">Common Lawn Mower Problems and Solutions</h3>
+        <p class="guide-meta">By GreenPal • Updated on March 5, 2024</p>
+      </div>
+    </div>
+    <button class="carousel-nav next">→</button>
+  </div>
+</section>
+
+<!-- Repair Costs Section -->
+<section class="costs-section">
+  <h2 class="section-title">Lawn mower repair costs in Denver</h2>
+  <p class="section-subtitle">Compare average pricing across various lawn shops in the Denver area.</p>
+  <div class="costs-grid">
+    <div class="cost-card">
+      <h3 class="cost-service">Blade Sharpening</h3>
+      <p class="cost-price">$10 - $25</p>
+    </div>
+    <div class="cost-card">
+      <h3 class="cost-service">Basic Tune-up</h3>
+      <p class="cost-price">$60 - $120</p>
+    </div>
+    <div class="cost-card">
+      <h3 class="cost-service">Carburetor Cleaning</h3>
+      <p class="cost-price">$45 - $90</p>
+    </div>
+    <div class="cost-card">
+      <h3 class="cost-service">Engine Repair</h3>
+      <p class="cost-price">$150 - $500</p>
+    </div>
+    <div class="cost-card">
+      <h3 class="cost-service">Belt Replacement</h3>
+      <p class="cost-price">$40 - $120</p>
+    </div>
+    <div class="cost-card">
+      <h3 class="cost-service">Deck Repair</h3>
+      <p class="cost-price">$80 - $250</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <h2 class="section-title">About Denver Repair Services</h2>
+  <p class="about-text">
+    GreenPal connects you with trusted lawn mower repair professionals in the Denver area. Our verified service providers offer competitive pricing, reliable service, and quick turnaround times. Whether you need a simple tune-up or major engine repair, find the right professional for your needs through our platform. All service providers are background-checked and reviewed by real customers, ensuring you get quality service every time.
+  </p>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="faq-header">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-decorative-line"></div>
+    <span class="faq-icon">?</span>
+  </div>
+  <p class="faq-subtitle">Everything you need to know about lawn mower repair services.</p>
+  <div class="faq-accordion">
+    <div class="faq-item open">
+      <div class="faq-question">
+        <span>How long does a typical lawn mower repair take in Denver?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Most basic repairs like blade sharpening or spark plug replacement can be completed same-day. More complex repairs such as engine work may take 2-3 days. Many service providers offer same-day service for common issues.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is the average cost of lawn mower repair in Denver?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Repair costs vary based on the type of service needed. Basic tune-ups range from $80-$120, while major engine repairs can cost $150-$300. Simple services like blade sharpening start at $10-$25.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do repair shops offer pickup and delivery services?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Many service providers on GreenPal offer pickup and delivery services for your convenience. Check individual shop profiles for specific service options.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What brands do repair shops service?</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Most repair shops service all major brands including Honda, Toro, Craftsman, John Deere, and more. Check individual shop profiles for specific brand expertise.</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn-show-more">Show More</button>
+</section>
+
+<!-- Lawn Mowing Service Section -->
+<section class="mowing-section">
+  <h2 class="section-title">Need a lawn mowing service while your lawnmower is being repaired?</h2>
+  <p class="section-subtitle">Best lawn mowing services near by you.</p>
+  <div class="mowing-carousel">
+    <button class="carousel-nav prev">←</button>
+    <div class="mowing-container">
+      <div class="mowing-card">
+        <div class="mowing-price-badge">$75</div>
+        <div class="mowing-price-label">/mowing</div>
+        <div class="mowing-available">Available</div>
+        <img src="https://via.placeholder.com/100x100" alt="Provider" class="mowing-avatar">
+        <h3 class="mowing-name">Green Lawn Care</h3>
+        <div class="rating-section">
+          <span class="mowing-rating">(4.8/5 . 105 Reviews)</span>
+        </div>
+        <p class="mowing-price">Avg. Price: $75 per cut</p>
+        <button class="btn-see-price">See My Free Price</button>
+      </div>
+      <div class="mowing-card">
+        <div class="mowing-price-badge">$74</div>
+        <div class="mowing-price-label">/mowing</div>
+        <div class="mowing-available">Available</div>
+        <img src="https://via.placeholder.com/100x100" alt="Provider" class="mowing-avatar">
+        <h3 class="mowing-name">Perfect Yard Services</h3>
+        <div class="rating-section">
+          <span class="mowing-rating">(4.8/5 . 98 Reviews)</span>
+        </div>
+        <p class="mowing-price">Avg. Price: $74 per cut</p>
+        <button class="btn-see-price">See My Free Price</button>
+      </div>
+      <div class="mowing-card">
+        <div class="mowing-price-badge">$28</div>
+        <div class="mowing-price-label">/mowing</div>
+        <div class="mowing-available">Available</div>
+        <img src="https://via.placeholder.com/100x100" alt="Provider" class="mowing-avatar">
+        <h3 class="mowing-name">Denver Lawn Pros</h3>
+        <div class="rating-section">
+          <span class="mowing-rating">(4.8/5 . 98 Reviews)</span>
+        </div>
+        <p class="mowing-price">Avg. Price: $28 per cut</p>
+        <button class="btn-see-price">See My Free Price</button>
+      </div>
+    </div>
+    <button class="carousel-nav next">→</button>
+  </div>
+</section>
+
+<!-- Why GreenPal Section -->
+<section class="why-section">
+  <h2 class="section-title">Why hire a professional on GreenPal?</h2>
+  <div class="benefits-container">
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <%= image_tag "Component 18.png", alt: "Free", class: "benefit-icon-img" %>
+      </div>
+      <h3 class="benefit-title">Always free to use</h3>
+      <p class="benefit-text">No hidden fees or subscription costs. Get quotes and connect with professionals completely free.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <%= image_tag "Component 17.png", alt: "Reviews", class: "benefit-icon-img" %>
+      </div>
+      <h3 class="benefit-title">Trusted Reviews</h3>
+      <p class="benefit-text">Read real reviews from verified customers to make informed decisions about service providers.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <%= image_tag "Component 35.png", alt: "Relax", class: "benefit-icon-img" %>
+      </div>
+      <h3 class="benefit-title">Hire with Ease & Relax</h3>
+      <p class="benefit-text">Simple booking process. Find, compare, and hire professionals in minutes without the hassle.</p>
+    </div>
+  </div>
+  <button class="btn-get-started">Get Started</button>
+</section>
+
+<!-- Explore Nearby Cities -->
+<section class="explore-section">
+  <h2 class="section-title">Explore Nearby Cities</h2>
+  <div class="explore-columns">
+    <div class="explore-column">
+      <h3 class="explore-category">Related lawn care information</h3>
+      <ul class="explore-links">
+        <li><a href="#">Lawn mower repair cost</a></li>
+        <li><a href="#">How to fix a lawn mower</a></li>
+        <li><a href="#">Lawn mower maintenance tips</a></li>
+        <li><a href="#">Best lawn mower brands</a></li>
+      </ul>
+      <a href="#" class="view-more-link">View More</a>
+    </div>
+    <div class="explore-column">
+      <h3 class="explore-category">Popular pros in Denver</h3>
+      <ul class="explore-links">
+        <li><a href="#">Green Mowers</a></li>
+        <li><a href="#">Downtown Denver</a></li>
+        <li><a href="#">Highlands</a></li>
+        <li><a href="#">Cherry Creek</a></li>
+      </ul>
+      <a href="#" class="view-more-link">View More</a>
+    </div>
+    <div class="explore-column">
+      <h3 class="explore-category">You might also like</h3>
+      <ul class="explore-links">
+        <li><a href="#">How to create a sensor</a></li>
+        <li><a href="#">Lawn care services</a></li>
+        <li><a href="#">Garden maintenance</a></li>
+        <li><a href="#">Landscaping services</a></li>
+      </ul>
+      <a href="#" class="view-more-link">View More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <div class="footer-logo">GREENPAL</div>
+      <p class="footer-description">
+        GreenPal connects homeowners with trusted lawn care professionals. Find, compare, and hire the best service providers in your area.
+      </p>
+      <div class="app-buttons">
+        <a href="#" class="app-btn play-store">
+          <%= image_tag "playstore.svg", alt: "Play Store", class: "app-icon" %>
+        </a>
+        <a href="#" class="app-btn app-store">
+          <%= image_tag "apple.svg", alt: "App Store", class: "app-icon" %>
+        </a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3 class="footer-heading">GreenPal</h3>
+      <ul class="footer-links">
+        <li><a href="#">Lawn Care Blog</a></li>
+        <li><a href="#">Nearby Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3 class="footer-heading">Providers</h3>
+      <ul class="footer-links">
+        <li><a href="#">Apply to be a GreenPal</a></li>
+      </ul>
+      <h3 class="footer-heading">Connect with us</h3>
+      <div class="social-icons">
+        <a href="#" class="social-icon">
+          <%= image_tag "Facebook.svg", alt: "Facebook", class: "social-icon-img" %>
+        </a>
+        <a href="#" class="social-icon">
+          <%= image_tag "twitter.svg", alt: "Twitter", class: "social-icon-img" %>
+        </a>
+        <a href="#" class="social-icon">
+          <%= image_tag "Insta.svg", alt: "Instagram", class: "social-icon-img" %>
+        </a>
+        <a href="#" class="social-icon">
+          <%= image_tag "Pinterest.svg", alt: "Pinterest", class: "social-icon-img" %>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-cities">
+      <a href="#">Matthews, NC</a>
+      <a href="#">Charlotte, NC</a>
+      <a href="#">Denver, CO</a>
+      <a href="#">Austin, TX</a>
+      <a href="#">Dallas, TX</a>
+      <button class="show-more-cities">Show More</button>
+    </div>
+    <div class="footer-legal">
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+      <p class="copyright">Copyright © 2023 GreenPal Co. All rights reserved.</p>
+    </div>
+  </div>
+  <div class="chat-widget">
+    <div class="chat-avatar">
+      <%= image_tag "Group_161.svg", alt: "Chat", class: "chat-icon" %>
+    </div>
+    <div class="chat-text">Say hi to get started! We're here to help.</div>
+  </div>
+</footer>
