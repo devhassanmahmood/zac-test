@@ -1,0 +1,25 @@
+<svg width="1366" height="998" viewBox="0 0 1366 998" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="bg">
+    <path id="Mask" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H1366V1177H0V0Z" fill="#0A3755"/>
+    <mask id="mask0_627_6565" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="1366" height="1090">
+      <path id="Mask_2" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H1366V1090H0V0Z" fill="white"/>
+    </mask>
+    <g mask="url(#mask0_627_6565)">
+      <ellipse id="Oval 3" opacity="0.0305707" cx="628.848" cy="352.378" rx="35.7995" ry="26.0256" transform="rotate(11 628.848 352.378)" fill="white"/>
+      <ellipse id="Oval 3 Copy 16" opacity="0.014606" cx="945.113" cy="444.378" rx="35.7995" ry="26.0256" transform="rotate(11 945.113 444.378)" fill="white"/>
+      <ellipse id="Oval 3 Copy 17" opacity="0.014606" cx="95.1133" cy="685.378" rx="35.7995" ry="26.0256" transform="rotate(11 95.1133 685.378)" fill="white"/>
+      <ellipse id="Oval 3 Copy 18" opacity="0.014606" cx="729.113" cy="855.378" rx="35.7995" ry="26.0256" transform="rotate(11 729.113 855.378)" fill="white"/>
+      <ellipse id="Oval 3 Copy 19" opacity="0.014606" cx="425.113" cy="717.378" rx="35.7995" ry="26.0256" transform="rotate(11 425.113 717.378)" fill="white"/>
+      <ellipse id="Oval 3 Copy 15" opacity="0.0163043" cx="334.719" cy="275.153" rx="22.2822" ry="16.1988" transform="rotate(11 334.719 275.153)" fill="white"/>
+      <ellipse id="Oval 3 Copy 14" opacity="0.0380435" cx="905.113" cy="178.378" rx="35.7995" ry="26.0256" transform="rotate(11 905.113 178.378)" fill="white"/>
+      <ellipse id="Oval 3 Copy 13" opacity="0.0380435" cx="740.579" cy="611.638" rx="46.038" ry="33.4689" transform="rotate(11 740.579 611.638)" fill="white"/>
+      <ellipse id="Oval 3 Copy 12" opacity="0.0268342" cx="1149.27" cy="386.051" rx="28.8035" ry="20.9396" transform="rotate(11 1149.27 386.051)" fill="white"/>
+      <ellipse id="Oval 3 Copy 21" opacity="0.0268342" cx="1366.27" cy="249.051" rx="28.8035" ry="20.9396" transform="rotate(11 1366.27 249.051)" fill="white"/>
+      <ellipse id="Oval 3 Copy 20" opacity="0.0268342" cx="1084.27" cy="758.051" rx="28.8035" ry="20.9396" transform="rotate(11 1084.27 758.051)" fill="white"/>
+      <ellipse id="Oval 3 Copy 11" opacity="0.0529325" cx="160.438" cy="433.343" rx="23.5986" ry="17.1558" transform="rotate(11 160.438 433.343)" fill="white"/>
+      <ellipse id="Oval 3 Copy 8" opacity="0.0301744" cx="1365.8" cy="562.083" rx="54.269" ry="39.4527" transform="rotate(11 1365.8 562.083)" fill="white"/>
+      <ellipse id="Oval 3 Copy 9" opacity="0.0317029" cx="95.1607" cy="210.543" rx="41.5095" ry="30.1767" transform="rotate(11 95.1607 210.543)" fill="white"/>
+      <ellipse id="Oval 3 Copy 10" opacity="0.0237206" cx="1206.19" cy="145.585" rx="53.7189" ry="39.0527" transform="rotate(11 1206.19 145.585)" fill="white"/>
+    </g>
+  </g>
+</svg>

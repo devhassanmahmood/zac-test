@@ -1,0 +1,619 @@
+/* Footer Styles */
+.main-footer {
+  width: 100%;
+  height: 998px;
+  background-color: #0A3755;
+  background-image: url('footer-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 0;
+  margin-top: 90px;
+  position: relative;
+}
+
+.footer-inner-container {
+  width: 80%;
+  height: 827px;
+  position: absolute;
+  top: 53px;
+  left: 160px;
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: fit-content;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer-column:first-child {
+  max-width: 391px;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-logo-link:hover {
+  opacity: 0.9;
+}
+
+.footer-logo {
+  width: 160.7593231201172px;
+  height: 23.090728759765625px;
+  display: block;
+}
+
+.footer-description {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-description-main {
+  width: 391px;
+  height: 84px;
+  opacity: 0.8;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.footer-description-secondary {
+  width: 377px;
+  height: 66px;
+  opacity: 0.8;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: rgba(255,255,255,0.8);
+  margin: 16px 0 0 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.footer-cta-heading {
+  width: 336.878173828125px;
+  height: 18px;
+  opacity: 1;
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #fff;
+  margin: 36px 0 15px 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.app-buttons {
+  width: fit-content;
+  height: 46.5px;
+  opacity: 1;
+  display: flex;
+  gap: 20.926483154296875px;
+  position: relative;
+}
+
+.app-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  padding: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.app-btn.play-store {
+  width: max-content;
+  height: 46px;
+  opacity: 0.8;
+  padding: 0 22.32px 0 22.32px;
+}
+
+.app-btn.app-store {
+  width: max-content;
+  height: 46px;
+  opacity: 0.8;
+  padding: 0 22.32px 0 22.32px;
+}
+
+.app-btn:hover {
+  opacity: 1;
+}
+
+.app-icon {
+  width: 21px;
+  height: 23px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.app-store .app-icon {
+  width: 22px;
+  height: 27px;
+}
+
+.app-btn-text {
+  width: max-content;
+  height: 23px;
+  opacity: 1;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-left: 12.59px;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  padding: 0;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+.footer-heading:first-of-type {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.footer-heading-connect {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0px;
+}
+
+.footer-column-providers {
+  height: 253px;
+  top: 56px;
+  left: 1010px;
+  opacity: 1;
+}
+
+.footer-providers-inner {
+  width: 178px;
+  height: 162px;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.footer-heading-providers {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.footer-links-providers {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.footer-links-providers li {
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links-providers a {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-column-greenpal {
+  width: fit-content;
+  height: 475px;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer-heading-greenpal {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+}
+
+.footer-links-greenpal {
+  width: 100%;
+  height: 468px;
+  position: relative;
+  top: 0;
+  opacity: 0.8;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+}
+
+.footer-links-greenpal li {
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links-greenpal a {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0px;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  width: 186px;
+  height: 34px;
+  top: 275px;
+  left: 1010px;
+  opacity: 1;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.social-icon:hover {
+  background: transparent;
+  opacity: 0.8;
+}
+
+.guarantee-badge {
+  width: 186px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.guarantee-badge-img {
+  width: 242px;
+  height: 85px;
+  display: block;
+}
+
+.social-icon-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-cities a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-cities a:hover {
+  color: #fff;
+}
+
+.show-more-cities {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.show-more-cities:hover {
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.1);
+}
+
+.footer-legal {
+  position: absolute;
+  top: 53px;
+  right: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.copyright {
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+}
+
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 50px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #04a78a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.chat-text {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Footer Mobile Styles */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 40px 16px 20px;
+    margin-top: 60px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  
+  .footer-logo {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-description {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  
+  .app-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .app-btn {
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 13px;
+    justify-content: flex-start;
+  }
+  
+  .app-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .footer-heading {
+    font-size: 15px;
+    margin-bottom: 12px;
+    margin-top: 16px;
+  }
+  
+  .footer-links {
+    gap: 8px;
+  }
+  
+  .footer-links a {
+    font-size: 13px;
+  }
+  
+  .social-icons {
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .social-icon-img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-bottom {
+    padding-top: 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .footer-cities {
+    gap: 10px;
+  }
+  
+  .footer-cities a {
+    font-size: 12px;
+  }
+  
+  .show-more-cities {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  
+  .footer-legal {
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .legal-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .legal-links a {
+    font-size: 12px;
+  }
+  
+  .copyright {
+    font-size: 11px;
+  }
+  
+  .chat-widget {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 16px;
+    border-radius: 40px;
+  }
+  
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .chat-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .chat-text {
+    font-size: 12px;
+  }
+}

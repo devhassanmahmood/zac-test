@@ -1,0 +1,25 @@
+<!-- Header -->
+<header class="main-header" role="banner">
+  <div class="header-container">
+    <%= link_to root_path, class: "logo-section", aria: { label: "GreenPal Home" } do %>
+      <%= image_tag "header-logo.svg", alt: "GreenPal Logo", class: "logo-svg" %>
+    <% end %>
+
+    <nav class="center-nav" aria-label="Main navigation">
+      <%= link_to "#", class: "center-nav-link locations-link" do %>
+        <span>Locations</span>
+        <%= image_tag "dropdown-arrow.svg", alt: "", class: "dropdown-arrow", aria: { hidden: true } %>
+      <% end %>
+      <%= link_to "#", class: "center-nav-link explore-services-link" do %>
+        <span>Explore Services</span>
+        <%= image_tag "dropdown-arrow.svg", alt: "", class: "dropdown-arrow", aria: { hidden: true } %>
+      <% end %>
+    </nav>
+
+    <nav class="header-nav" aria-label="User actions">
+      <button type="button" class="btn-join-pro">Join as Pro</button>
+      <button type="button" class="btn-quotes">Get Free Lawn Mowing Quotes</button>
+      <button type="button" class="btn-login">Log In</button>
+    </nav>
+  </div>
+</header>
