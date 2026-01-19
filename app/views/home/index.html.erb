@@ -250,7 +250,7 @@
       <div class="mowing-container">
         <div class="mowing-card">
           <div class="mowing-price-tag">
-            <%= image_tag "price-tag-icon.svg", alt: "Price", class: "price-tag-svg" %>
+            <%= image_tag "price-tag-icon.svg", alt: "Price", class: "price-tag-svg" %>o
             <div class="price-tag-content">
               <span class="price-tag-amount">$75</span>
               <span class="price-tag-label">/mowing</span>
@@ -260,22 +260,24 @@
             <div class="mowing-avatar-wrapper">
               <%= image_tag "people/1.png", alt: "Provider", class: "mowing-avatar" %>
             </div>
-            <div class="mowing-available">
-              <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
-              <span>Available</span>
+            <div class="mowing-name-available-wrapper">
+              <div class="mowing-available">
+                <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
+                <span>Available</span>
+              </div>
+              <h3 class="mowing-name">Green Lawn Care</h3>
+              <div class="mowing-rating-section">
+                <div class="mowing-stars">
+                  <% 5.times do %>
+                    <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
+                  <% end %>
+                </div>
+                <span class="mowing-rating-text">(4.8/5. 105 Reviews)</span>
+              </div>
+              <p class="mowing-price">Avg. Price: $75 per cut</p>
+              <button class="btn-see-price">See My Free Price</button>
             </div>
           </div>
-          <h3 class="mowing-name">Green Lawn Care</h3>
-          <div class="mowing-rating-section">
-            <div class="mowing-stars">
-              <% 5.times do %>
-                <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
-              <% end %>
-            </div>
-            <span class="mowing-rating-text">(4.8/5. 105 Reviews)</span>
-          </div>
-          <p class="mowing-price">$ Ava. Price: $75 per cut</p>
-          <button class="btn-see-price">See My Free Price</button>
         </div>
         <div class="mowing-card">
           <div class="mowing-price-tag">
@@ -289,22 +291,24 @@
             <div class="mowing-avatar-wrapper">
               <%= image_tag "people/2.png", alt: "Provider", class: "mowing-avatar" %>
             </div>
-            <div class="mowing-available">
-              <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
-              <span>Available</span>
+            <div class="mowing-name-available-wrapper">
+              <div class="mowing-available">
+                <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
+                <span>Available</span>
+              </div>
+              <h3 class="mowing-name">Perfect Yard Services</h3>
+              <div class="mowing-rating-section">
+                <div class="mowing-stars">
+                  <% 5.times do %>
+                    <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
+                  <% end %>
+                </div>
+                <span class="mowing-rating-text">(4.8/5. 98 Reviews)</span>
+              </div>
+              <p class="mowing-price">Avg. Price: $74 per cut</p>
+              <button class="btn-see-price">See My Free Price</button>
             </div>
           </div>
-          <h3 class="mowing-name">Perfect Yard Services</h3>
-          <div class="mowing-rating-section">
-            <div class="mowing-stars">
-              <% 5.times do %>
-                <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
-              <% end %>
-            </div>
-            <span class="mowing-rating-text">(4.8/5. 98 Reviews)</span>
-          </div>
-          <p class="mowing-price">$ Ava. Price: $74 per cut</p>
-          <button class="btn-see-price">See My Free Price</button>
         </div>
         <div class="mowing-card">
           <div class="mowing-price-tag">
@@ -318,22 +322,24 @@
             <div class="mowing-avatar-wrapper">
               <%= image_tag "people/3.png", alt: "Provider", class: "mowing-avatar" %>
             </div>
-            <div class="mowing-available">
-              <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
-              <span>Available</span>
+            <div class="mowing-name-available-wrapper">
+              <div class="mowing-available">
+                <%= image_tag "verified-icon.svg", alt: "Available", class: "available-checkmark" %>
+                <span>Available</span>
+              </div>
+              <h3 class="mowing-name">Denver Lawn Pros</h3>
+              <div class="mowing-rating-section">
+                <div class="mowing-stars">
+                  <% 5.times do %>
+                    <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
+                  <% end %>
+                </div>
+                <span class="mowing-rating-text">(4.8/5. 98 Reviews)</span>
+              </div>
+              <p class="mowing-price">Avg. Price: $76 per cut</p>
+              <button class="btn-see-price">See My Free Price</button>
             </div>
           </div>
-          <h3 class="mowing-name">Denver Lawn Pros</h3>
-          <div class="mowing-rating-section">
-            <div class="mowing-stars">
-              <% 5.times do %>
-                <%= image_tag "star-filled.svg", alt: "Star", class: "mowing-star" %>
-              <% end %>
-            </div>
-            <span class="mowing-rating-text">(4.8/5. 98 Reviews)</span>
-          </div>
-          <p class="mowing-price">$ Ava. Price: $76 per cut</p>
-          <button class="btn-see-price">See My Free Price</button>
         </div>
       </div>
       <button class="carousel-nav next">
@@ -350,3 +356,142 @@
 <%= render 'home/partials/explore_cities' %>
 
 <%= render 'layouts/footer' %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if element is truncated and add indicator
+    function checkTruncation(element, maxLines) {
+      // Create a temporary clone to measure full height without affecting layout
+      const clone = element.cloneNode(true);
+      clone.style.cssText = window.getComputedStyle(element).cssText;
+      clone.style.position = 'absolute';
+      clone.style.visibility = 'hidden';
+      clone.style.webkitLineClamp = 'none';
+      clone.style.lineClamp = 'none';
+      clone.style.maxHeight = 'none';
+      clone.style.overflow = 'visible';
+      clone.style.height = 'auto';
+      clone.classList.remove('truncated');
+      
+      element.parentNode.appendChild(clone);
+      
+      const fullHeight = clone.scrollHeight;
+      const lineHeight = parseFloat(getComputedStyle(element).lineHeight);
+      const maxHeight = lineHeight * maxLines;
+      
+      // Remove clone
+      clone.parentNode.removeChild(clone);
+      
+      // Check if content is truncated
+      if (fullHeight > maxHeight) {
+        element.classList.add('truncated');
+      } else {
+        element.classList.remove('truncated');
+      }
+    }
+    
+    // Check all service type tags (max 2 lines)
+    document.querySelectorAll('.service-type-tag').forEach(function(tag) {
+      checkTruncation(tag, 2);
+    });
+    
+    // Check all pricing tags (max 2 lines)
+    document.querySelectorAll('.pricing-tag').forEach(function(tag) {
+      checkTruncation(tag, 2);
+    });
+    
+    // Check all offer tags (max 1 line)
+    document.querySelectorAll('.offer-tag').forEach(function(tag) {
+      checkTruncation(tag, 1);
+    });
+    
+    // Re-check on window resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        document.querySelectorAll('.service-type-tag, .pricing-tag, .offer-tag').forEach(function(tag) {
+          const maxLines = tag.classList.contains('offer-tag') ? 1 : 2;
+          checkTruncation(tag, maxLines);
+        });
+        // Recalculate service offers
+        calculateServiceOffers();
+      }, 250);
+    });
+    
+    // Function to calculate how many service offer tags fit in one line
+    function calculateServiceOffers() {
+      document.querySelectorAll('.service-offers-wrapper').forEach(function(wrapper) {
+        const offersContainer = wrapper.querySelector('.service-offers');
+        const countElement = wrapper.querySelector('.service-offers-count');
+        const tags = Array.from(offersContainer.querySelectorAll('.offer-tag'));
+        
+        if (tags.length === 0) {
+          if (countElement) countElement.style.display = 'none';
+          return;
+        }
+        
+        // Reset all tags to visible first
+        tags.forEach(function(tag) {
+          tag.style.display = '';
+          tag.style.visibility = 'visible';
+        });
+        
+        // Get available width - use wrapper's clientWidth to account for padding
+        const wrapperStyle = window.getComputedStyle(wrapper);
+        const wrapperPadding = parseFloat(wrapperStyle.paddingLeft) + parseFloat(wrapperStyle.paddingRight);
+        const availableWidth = wrapper.clientWidth - wrapperPadding;
+        const gap = 6;
+        
+        // Temporarily show count element to measure its width
+        if (countElement) {
+          countElement.style.display = '';
+          countElement.style.visibility = 'visible';
+          countElement.textContent = '+99'; // Use max expected width for measurement
+          const countElementWidth = countElement.offsetWidth;
+          countElement.style.display = 'none';
+          countElement.style.visibility = 'hidden';
+          
+          // Calculate which tags fit
+          let totalWidth = 0;
+          let visibleCount = 0;
+          
+          for (let i = 0; i < tags.length; i++) {
+            const tag = tags[i];
+            const tagWidth = tag.offsetWidth;
+            
+            // Check if we need to account for count element (only if there are more tags after this one)
+            const remainingTags = tags.length - i - 1;
+            const countSpace = remainingTags > 0 ? (gap + countElementWidth) : 0;
+            const neededWidth = totalWidth + tagWidth + (i > 0 ? gap : 0) + countSpace;
+            
+            if (neededWidth <= availableWidth) {
+              totalWidth += tagWidth + (i > 0 ? gap : 0);
+              visibleCount++;
+            } else {
+              // Hide this tag and all remaining tags
+              for (let j = i; j < tags.length; j++) {
+                tags[j].style.display = 'none';
+              }
+              break;
+            }
+          }
+          
+          // Show count if there are hidden tags
+          const hiddenCount = tags.length - visibleCount;
+          if (hiddenCount > 0) {
+            countElement.textContent = '+' + hiddenCount;
+            countElement.style.display = '';
+            countElement.style.visibility = 'visible';
+          } else {
+            countElement.style.display = 'none';
+            countElement.style.visibility = 'hidden';
+          }
+        }
+      });
+    }
+    
+    // Calculate service offers on load
+    calculateServiceOffers();
+  });
+</script>

@@ -3,11 +3,11 @@
   <div class="shop-visual-section">
     <div class="shop-main-image">
       <%= image_tag shop['mainImage'], alt: "Shop", class: "main-image" %>
-    </div>
-    <div class="shop-thumbnails">
-      <% shop['thumbnails'].each do |thumb| %>
-        <%= image_tag thumb, alt: "Gallery", class: "thumbnail" %>
-      <% end %>
+      <div class="shop-thumbnails">
+        <% shop['thumbnails'].each do |thumb| %>
+          <%= image_tag thumb, alt: "Gallery", class: "thumbnail" %>
+        <% end %>
+      </div>
     </div>
     <div class="shop-action-buttons">
       <button class="action-btn call-btn">
@@ -23,14 +23,21 @@
   
   <!-- Right Section - Information -->
   <div class="shop-info-section">
-    <div class="shop-logo">
-      <%= image_tag shop['logo'], alt: "Logo", class: "logo-image" %>
+    <!-- Header: Logo, Verified Badge, Name -->
+    <div class="shop-header">
+      <div class="shop-logo">
+        <%= image_tag shop['logo'], alt: "Logo", class: "logo-image" %>
+      </div>
+      <div class="shop-header-content">
+        <div class="verified-badge">
+          <%= image_tag "verified-icon.svg", alt: "Verified", class: "checkmark-icon" %>
+          <span>Verified by GreenPal</span>
+        </div>
+        <h3 class="shop-name"><%= shop['name'] %></h3>
+      </div>
     </div>
-    <div class="verified-badge">
-      <%= image_tag "verified-icon.svg", alt: "Verified", class: "checkmark-icon" %>
-      Verified by GreenPal
-    </div>
-    <h3 class="shop-name"><%= shop['name'] %></h3>
+    
+    <!-- Rating -->
     <div class="rating-section">
       <div class="star-icons">
         <% full_stars = shop['rating'].floor %>
@@ -52,6 +59,8 @@
       <span class="rating-text"><%= shop['rating'] %></span>
       <span class="review-count">(<%= shop['reviewCount'].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %> reviews)</span>
     </div>
+    
+    <!-- Location & Status -->
     <div class="location-status">
       <%= image_tag "location-pin-icon.svg", alt: "Location", class: "location-icon" %>
       <span class="location-text"><%= shop['location'] %></span>
@@ -61,9 +70,11 @@
       <% if shop['status'] == 'Closed' %>
         <span class="status-closed"><%= shop['status'] %></span> until <%= shop['statusText'].split('until ').last %>
       <% else %>
-        <span class="status-open"><%= shop['statusText'] %></span>
+        <span class="status-open">Open </span><%= shop['statusText'].gsub(/^Open\s+/, '') %>
       <% end %>
     </div>
+    
+    <!-- Service Types & Pricing -->
     <div class="service-types">
       <% shop['serviceTypes'].each do |type| %>
         <span class="service-type-tag"><%= type %></span>
@@ -71,52 +82,58 @@
       <% shop['pricing'].each do |price| %>
         <span class="pricing-tag"><%= price['service'] %>: <%= price['price'] %></span>
       <% end %>
-      <span class="turnaround-tag">
-        <span class="turnaround-text">Typical Turnaround: <%= shop['turnaround'] %></span>
-      </span>
     </div>
+    
+    <!-- Service Offers -->
     <div class="service-offers-section">
       <div class="service-offers-label">Service Offered</div>
-      <div class="service-offers">
-        <% shop['servicesOffered'].each do |service| %>
-          <span class="offer-tag"><%= service %></span>
-        <% end %>
+      <div class="service-offers-wrapper">
+        <div class="service-offers">
+          <% shop['servicesOffered'].each do |service| %>
+            <span class="offer-tag"><%= service %></span>
+          <% end %>
+        </div>
+        <span class="service-offers-count" style="display: none;"></span>
       </div>
     </div>
+    
+    <!-- Description -->
     <p class="shop-description">
       <%= shop['description'] %> <a href="#" class="read-more">Read More</a>
     </p>
-    <div class="shop-card-social-icons">
-      <% shop['socialMedia'].each do |social| %>
-        <% case social
-             when 'instagram' %>
-          <a href="#" class="shop-card-social-icon">
-            <%= image_tag "shop-card-instagram-icon.svg", alt: "Instagram", class: "shop-card-social-icon-img" %>
-          </a>
-        <% when 'facebook' %>
-          <a href="#" class="shop-card-social-icon">
-            <%= image_tag "shop-card-facebook-icon.svg", alt: "Facebook", class: "shop-card-social-icon-img" %>
-          </a>
-        <% when 'twitter', 'x' %>
-          <a href="#" class="shop-card-social-icon">
-            <%= image_tag "shop-card-x-icon.svg", alt: "X", class: "shop-card-social-icon-img" %>
-          </a>
-        <% when 'tiktok' %>
-          <a href="#" class="shop-card-social-icon">
-            <%= image_tag "shop-card-tiktok-icon.svg", alt: "TikTok", class: "shop-card-social-icon-img" %>
-          </a>
-        <% when 'linkedin' %>
-          <a href="#" class="shop-card-social-icon">
-            <%= image_tag "shop-card-linkedin-icon.svg", alt: "LinkedIn", class: "shop-card-social-icon-img" %>
-          </a>
-        <% else %>
-          <a href="#" class="shop-card-social-icon">
-            <span class="shop-card-social-icon-text"><%= social %></span>
-          </a>
+    
+    <!-- Footer: Social Icons & View Profile Button -->
+    <div class="shop-footer">
+      <div class="shop-card-social-icons">
+        <% shop['socialMedia'].each do |social| %>
+          <% case social
+               when 'instagram' %>
+            <a href="#" class="shop-card-social-icon">
+              <%= image_tag "shop-card-instagram-icon.svg", alt: "Instagram", class: "shop-card-social-icon-img" %>
+            </a>
+          <% when 'facebook' %>
+            <a href="#" class="shop-card-social-icon">
+              <%= image_tag "shop-card-facebook-icon.svg", alt: "Facebook", class: "shop-card-social-icon-img" %>
+            </a>
+          <% when 'twitter', 'x' %>
+            <a href="#" class="shop-card-social-icon">
+              <%= image_tag "shop-card-x-icon.svg", alt: "X", class: "shop-card-social-icon-img" %>
+            </a>
+          <% when 'tiktok' %>
+            <a href="#" class="shop-card-social-icon">
+              <%= image_tag "shop-card-tiktok-icon.svg", alt: "TikTok", class: "shop-card-social-icon-img" %>
+            </a>
+          <% when 'linkedin' %>
+            <a href="#" class="shop-card-social-icon">
+              <%= image_tag "shop-card-linkedin-icon.svg", alt: "LinkedIn", class: "shop-card-social-icon-img" %>
+            </a>
+          <% else %>
+            <a href="#" class="shop-card-social-icon">
+              <span class="shop-card-social-icon-text"><%= social %></span>
+            </a>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-    <div class="view-profile-wrapper">
+      </div>
       <button class="view-profile-btn">View Profile</button>
     </div>
   </div>
