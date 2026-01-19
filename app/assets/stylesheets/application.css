@@ -1340,12 +1340,12 @@ body {
 }
 
 .costs-section-inner .section-title {
-  margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 800;
   color: #373737;
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1.35;
+  margin-bottom: ;
 }
 
 .about-section-inner {
@@ -1363,7 +1363,7 @@ body {
 
 .section-subtitle {
   color: #666666;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 32px;
   line-height: 1.5;
   font-weight: 400;
@@ -2310,11 +2310,6 @@ body {
   .costs-section-inner .section-title {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  .section-subtitle {
-    font-size: 15px;
-    margin-bottom: 24px;
   }
   
   .costs-grid {
