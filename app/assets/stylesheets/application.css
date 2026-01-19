@@ -1101,13 +1101,32 @@ body {
 .explore-section {
   max-width: 1400px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+
+.explore-section-wrapper {
+  width: 65%;
+  /* Match listings-column width: 65% of content-wrapper */
+}
+
+.explore-section .section-title {
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: #373737;
+}
+
+.explore-container {
+  background-color: #F7F7F7;
+  border-radius: 12px;
+  padding: 32px 40px;
+  margin-top: 0;
 }
 
 .explore-columns {
   display: flex;
-  gap: 40px;
-  margin-top: 30px;
+  gap: 60px;
+  margin-top: 0;
 }
 
 .explore-column {
@@ -1115,36 +1134,54 @@ body {
 }
 
 .explore-category {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  color: #000;
-  margin-bottom: 15px;
+  color: #373737;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 
 .explore-links {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+}
+
+.explore-links li {
+  margin: 0;
+  padding: 0;
+  color: #848484;
 }
 
 .explore-links a {
-  color: #666;
+  color: #666666;
   text-decoration: none;
   font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  transition: color 0.2s ease;
 }
 
 .explore-links a:hover {
-  color: #04a78a;
+  color: #03A3E7;
 }
 
-.view-more-link {
-  color: #04a78a;
+.show-more-link {
+  color: #03A3E7;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
-  margin-top: 10px;
+  font-weight: 400;
+  margin-top: 16px;
   display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.show-more-link:hover {
+  color: #0052a3;
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -1928,28 +1965,43 @@ body {
     padding: 0 16px;
   }
   
+  .explore-section-wrapper {
+    width: 100%;
+  }
+  
+  .explore-section .section-title {
+    margin-bottom: 20px;
+  }
+  
+  .explore-container {
+    padding: 24px 20px;
+    border-radius: 8px;
+    color: #373737
+  }
+  
   .explore-columns {
     flex-direction: column;
-    gap: 24px;
-    margin-top: 24px;
+    gap: 32px;
+    margin-top: 0;
   }
   
   .explore-category {
     font-size: 16px;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
   }
   
   .explore-links {
-    gap: 8px;
+    gap: 10px;
   }
   
   .explore-links a {
     font-size: 13px;
   }
   
-  .view-more-link {
+  .show-more-link {
     font-size: 13px;
-    margin-top: 8px;
+    margin-top: 14px;
   }
   
   /* Footer Mobile */
